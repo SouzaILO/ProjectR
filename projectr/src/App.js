@@ -4,8 +4,11 @@ import './App.css';
 
 function App() {
   return (
-        <Link to="/login">Login</Link>
-
+    <div className="App">
+        <Link to="/login" margin="10px">Login</Link>
+        <Link to="/home">Home</Link>
+    </div>        
+        
   );
 }
 

@@ -11,7 +11,9 @@ const Home = () => {
     return(
         <div>
             <Header/>
-            <PageFrame/>
+            <PageFrame>
+                
+            </PageFrame>
         </div>
         
 

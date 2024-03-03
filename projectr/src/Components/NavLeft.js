@@ -27,8 +27,6 @@ function NavLeft() {
         onClose={onClose}
         finalFocusRef={btnRef}
         size={'xs'}
-        
-        
       >
 
         <DrawerOverlay />
@@ -37,6 +35,8 @@ function NavLeft() {
           color="white"
           maxHeight={'80vh'}
           borderRightRadius={'20px'}
+          marginTop={'100px'}
+          marginBottom={'10px'}
 
         >
           <DrawerCloseButton />
@@ -44,7 +44,9 @@ function NavLeft() {
 
           <DrawerBody
           display={'flex'}
-          flexDirection={'column'}>
+          flexDirection={'column'}         
+          >
+          
           
 
             <Link to="/home">Home</Link>

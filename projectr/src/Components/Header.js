@@ -17,14 +17,14 @@ const Header = props => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding="0.02 rem"
-      bg="teal.500"
+      h="40px"
+      bg="blue.500"
       color="white"
       {...props}
     >
       <Flex align="center" mr={5}>
         <Heading as="h1" size="lg">
-          Chakra UI
+        <img src={require("../assets/img/resolucaologo.png")} alt="resolucaoLogo" sizes="10px" />
         </Heading>
       </Flex>
 
@@ -46,9 +46,9 @@ const Header = props => {
         alignItems="center"
         flexGrow={1}
       >
-        <MenuItems>Docs</MenuItems>
-        <MenuItems>Examples</MenuItems>
-        <MenuItems>Blog</MenuItems>
+        <MenuItems></MenuItems>
+        <MenuItems></MenuItems>
+        <MenuItems></MenuItems>
       </Box>
 
       <Box

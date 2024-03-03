@@ -1,12 +1,15 @@
-import { Link } from 'react-router-dom';
 import './App.css';
+
+
+import NavLeft from './Components/NavLeft';
+
+
 
 
 function App() {
   return (
     <div className="App">
-        <Link to="/login" margin="10px">Login</Link>
-        <Link to="/home">Home</Link>
+       <NavLeft/>
     </div>        
         
   );

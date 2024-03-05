@@ -2,9 +2,12 @@
 import React from "react";
 import PageFrame from "../../Components/PageFrame";
 import Header from "../../Components/Header";
+import { Flex } from "@chakra-ui/react";
 
 
-const Home = () => {
+
+
+const Home = () => { 
 
 
 
@@ -12,7 +15,7 @@ const Home = () => {
         <div>
             <Header/>
             <PageFrame>
-                
+
             </PageFrame>
         </div>
         

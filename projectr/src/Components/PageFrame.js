@@ -1,7 +1,7 @@
-import {  Flex, HStack, VStack } from "@chakra-ui/react";
+import {  Flex } from "@chakra-ui/react";
 import React from "react";
 import NavLeft from "./NavLeft";
-import Header from "./Header";
+
 //TODP: Criar um componente que será o frame de todas as páginas
 // Esse componente terá um menu lateral e o conteudo da pagina mudaado de aordo com os componentes filhos
 // O menu lateral será um componente separado para melhor controle
@@ -26,7 +26,15 @@ const PageFrame= ({children}) => {
                 height={'100%'}
                 >
                     <NavLeft/>
-                    {children}
+                    <Flex 
+                padding={'10px'}
+                w={'100%'}
+                h={'100%'}
+                bg={'gray.600'}
+                >
+                   {children}
+
+                </Flex>
                 </Flex>
 
 

@@ -16,7 +16,7 @@ function NavLeft() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
 
-  return (
+  return ( 
     <>
       <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
         NavLeft
@@ -46,9 +46,6 @@ function NavLeft() {
           display={'flex'}
           flexDirection={'column'}         
           >
-          
-          
-
             <Link to="/home">Home</Link>
             <Link to="/login">Login</Link>
             <Link to="/cliente">Cliente</Link>

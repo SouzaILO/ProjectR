@@ -1,62 +1,54 @@
 import React from "react";
+import { render } from "react-dom";
 import PageFrame from "../../Components/PageFrame";
 import Header from "../../Components/Header";
+import { Button, Flex, FormControl, Input } from "@chakra-ui/react";
 import TableComponent from "../../Components/Tabelas/TableCliente";
-import { Box, Flex, Input } from "@chakra-ui/react";
-import ModalNovoCliente from "../../Components/Modals/ModalNewCliente";
+import { useState } from "react";
 
 //TODO Fazer com que cada fileira da tabela seja clicavel e redirecione para a pagina de detalhes do cliente OU abrir um modal com os detalhes do cliente
 
-
 const Cliente = () => {
+  const [FiltroIn, setFiltroIn] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFiltroIn(FiltroIn);
+  };
+  return (
+    <div>
+      <Header />
+      <PageFrame>
+        <Flex
+          display={"flex"}
+          flexDirection={"column"}
+          margin={"10px"}
+          w={"100%"}
+          h={"100%"}
+        >
+          <Flex>
+            <Flex w={"100%"} h={"10%"}>
+              <form onSubmit={handleSubmit}>
+                <Input
+                  border="1px"
+                  focusBorderColor="gray.900"
+                  bg={"white"}
+                  width={"100%"}
+                  margin={"10px"}
+                  type="text"
+                  placeholder="Filtro de Cliente"
+                  value={FiltroIn}
+                  onChange={(e) => setFiltroIn(e.target.value)}
+                />
+              </form>
+            </Flex>
+          </Flex>
 
-
-    return(
-        <div>
-            <Header/>
-            <PageFrame>
-
-
-                
-                <Flex
-                    display={'flex'}
-                    flexDirection={'column'}
-                    margin={'10px'}
-                    w={'100%'}
-                    h={'80%'}
-                >
-                <Flex
-                    
-                    w={'100%'}
-                    h={'10%'}
-                >
-                    <Input 
-                    placeholder='Basic usage'
-                    border='1px'
-                    focusBorderColor='gray.900'
-                    bg={'white'}
-                    width={'20%'}
-                    margin={'10px'}/>
-
-                    <Box
-                        marginLeft="80%"
-                        marginTop={'10px'}
-                    >
-                        <ModalNovoCliente />
-                    </Box>
-                    
-
-                </Flex>
-
-                    <TableComponent/>
-                    
-                </Flex>
-
-                
-            </PageFrame>
-        </div>
-    );
-}
+          <TableComponent Filtro={FiltroIn} />
+        </Flex>
+      </PageFrame>
+    </div>
+  );
+};
 
 export default Cliente;

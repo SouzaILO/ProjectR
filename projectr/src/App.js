@@ -1,17 +1,12 @@
-import './App.css';
+import "./App.css";
 
-
-import NavLeft from './Components/NavLeft';
-
-
-
+import NavLeft from "./Components/NavLeft";
 
 function App() {
   return (
     <div className="App">
-       <NavLeft/>
-    </div>        
-        
+      <NavLeft />
+    </div>
   );
 }
 

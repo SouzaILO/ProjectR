@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex, Text, Button } from "@chakra-ui/react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
@@ -8,7 +8,7 @@ const MenuItems = ({ children }) => (
   </Text>
 );
 
-const Header = props => {
+const Header = (props) => {
   const [show, setShow] = React.useState(false);
   const handleToggle = () => setShow(!show);
 
@@ -23,10 +23,15 @@ const Header = props => {
       color="white"
       {...props}
     >
-      <Flex align="center" mr={5} ml={'50px'}>
-          <Link to={'/home'}>
-            <img src={require("../assets/img/resolucaologo.png")} alt="resolucaoLogo" width="50px" height="50px"  />
-          </Link>
+      <Flex align="center" mr={5} ml={"50px"}>
+        <Link to={"/home"}>
+          <img
+            src={require("../assets/img/resolucaologo.png")}
+            alt="resolucaoLogo"
+            width="50px"
+            height="50px"
+          />
+        </Link>
       </Flex>
 
       <Box display={{ sm: "block", md: "none" }} onClick={handleToggle}>
@@ -55,9 +60,9 @@ const Header = props => {
       <Box
         display={{ sm: show ? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
-        mr={'50px'}
+        mr={"50px"}
       >
-        <Button bg="transparent" border="1px" marginRight={'10px'} size={'sm'}>
+        <Button bg="transparent" border="1px" marginRight={"10px"} size={"sm"}>
           Sair
         </Button>
       </Box>

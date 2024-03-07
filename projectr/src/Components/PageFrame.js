@@ -10,7 +10,7 @@ import NavLeft from "./NavLeft";
 const PageFrame = ({ children }) => {
   return (
     <Flex>
-      <Flex w="100%" h="100vh" backgroundColor="gray.700" position={"fixed"}>
+      <Flex w="100%" h="100%" backgroundColor="gray.700" position={"fixed"}>
         <Flex
           id="MainContent"
           backgroundColor={"blue.200"}

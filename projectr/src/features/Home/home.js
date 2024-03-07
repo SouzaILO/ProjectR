@@ -1,13 +1,15 @@
 import React from "react";
 import PageFrame from "../../Components/PageFrame";
 import Header from "../../Components/Header";
-import { Flex } from "@chakra-ui/react";
+import CardsHome from "../../Components/CardsHome";
 
 const Home = () => {
   return (
     <div>
       <Header />
-      <PageFrame></PageFrame>
+      <PageFrame>
+        <CardsHome />
+      </PageFrame>
     </div>
   );
 };

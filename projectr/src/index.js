@@ -11,10 +11,6 @@ import ClienteEdit from "./features/Cliente/ClienteEdit.js";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
-const matchStatestoProps = (state, ownProps) => {
-  return { id: ownProps.match.params.id, categories: state.categories };
-};
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -22,7 +18,7 @@ root.render(
     <ChakraProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/cliente" element={<Cliente />} />

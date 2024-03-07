@@ -7005,5 +7005,12 @@
     "cpf": "000.000.000-00",
     "email": "Iago.lucas@hotmail.com",
     "phone": "69696-9696"
+  },
+  {
+    "id": 1002,
+    "nome": "Caio",
+    "cpf": "000.000.000-00",
+    "email": "CaioPinto@hotmail.com",
+    "phone": "69696-9696"
   }
 ]

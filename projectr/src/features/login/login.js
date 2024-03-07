@@ -16,7 +16,7 @@ import NavLeft from "../../Components/NavLeft";
 const Login = () => {
   const formik = useFormik({
     initialValues: {
-      usuario: "Digite seu usuário",
+      usuario: "",
       senha: "",
     },
     validationSchema: Yup.object({

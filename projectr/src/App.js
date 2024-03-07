@@ -1,5 +1,3 @@
-import "./App.css";
-
 import NavLeft from "./Components/NavLeft";
 
 function App() {

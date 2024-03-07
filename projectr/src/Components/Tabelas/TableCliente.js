@@ -53,9 +53,15 @@ const TableComponent = (Filtro) => {
                   <Td>
                     <Link to={"/cliente/" + cliente.id}>{cliente.nome}</Link>
                   </Td>
-                  <Td>{cliente.cpf}</Td>
-                  <Td>{cliente.phone}</Td>
-                  <Td>{cliente.email}</Td>
+                  <Td>
+                    <Link to={"/cliente/" + cliente.id}>{cliente.cpf}</Link>
+                  </Td>
+                  <Td>
+                    <Link to={"/cliente/" + cliente.id}>{cliente.phone}</Link>
+                  </Td>
+                  <Td>
+                    <Link to={"/cliente/" + cliente.id}>{cliente.email}</Link>
+                  </Td>
                 </Tr>
               )
             );

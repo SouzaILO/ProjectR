@@ -10,12 +10,12 @@ const ClienteEdit = () => {
   const Cliente = PegarClientePorId(id);
 
   return (
-    <div>
+    <div width={"100%"} height={"100%"}>
       <Header />
       <PageFrame>
-        {Cliente.map((clienteMapa, index) => {
+        {Cliente.map((clienteMapa) => {
           return (
-            <Box key={clienteMapa.id}>
+            <Box w={"100%"} h={"100%"} bg={"blue.100"}>
               <Text>Cliente ID: {clienteMapa.id}</Text>
               <Text>Nome: {clienteMapa.nome}</Text>
               <Text>CPF: {clienteMapa.cpf}</Text>

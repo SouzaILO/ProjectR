@@ -4,12 +4,10 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Td,
   TableCaption,
   TableContainer,
-  Box,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 //import Clientes from "../../Json/Clientes.json";

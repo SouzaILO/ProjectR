@@ -8,7 +8,24 @@ const Home = () => {
     <div>
       <Header />
       <PageFrame>
-        <CardsHome />
+        <CardsHome
+          Head={"Clientes"}
+          Body={"Buscar todos Clientes"}
+          Button={"Buscar Clientes"}
+          Link={"/cliente"}
+        />
+        <CardsHome
+          Head={"Funcionarios"}
+          Body={"Buscar todos Funcionarios"}
+          Button={"Buscar Funcionarios"}
+          Link={"/funcionarios"}
+        />
+        <CardsHome
+          Head={"Agenda"}
+          Body={"Agenda para controle de horarios"}
+          Button={"Abrir Agenda"}
+          Link={"/agenda"}
+        />
       </PageFrame>
     </div>
   );

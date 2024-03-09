@@ -7,6 +7,7 @@ import Login from "./features/login/login";
 import Home from "./features/Home/home";
 import Cliente from "./features/Cliente/Cliente";
 import ClienteEdit from "./features/Cliente/ClienteEdit.js";
+import ClienteNovo from "./features/Cliente/NovoCliente.js";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -22,6 +23,7 @@ root.render(
           <Route path="/home" element={<Home />} />
           <Route path="/cliente" element={<Cliente />} />
           <Route path="/cliente/:id" element={<ClienteEdit />} />
+          <Route path="/Cadastro/Cliente" element={<ClienteNovo />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

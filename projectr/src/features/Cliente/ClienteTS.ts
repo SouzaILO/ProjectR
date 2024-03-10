@@ -1,11 +1,17 @@
-import Cliente from "../../Json/Clientes.json";
+import { Cliente } from "../../Data/ClienteData.js";
 export const FiltrarClienteLogic = (InputFiltro) => {
+  const Filtro = InputFiltro.Filtro;
+  const Check = InputFiltro.FiltroAtivo;
+
   const clientesFiltrados = Cliente.filter((cliente) => {
-    return (
-      cliente.cpf.includes(InputFiltro.Filtro) ||
-      cliente.nome.toLowerCase().includes(InputFiltro.Filtro.toLowerCase()) ||
-      cliente.email.toLowerCase().includes(InputFiltro.Filtro.toLowerCase())
-    );
+    if (Check == true) {
+      return (
+        cliente.nome.toLowerCase().includes(Filtro.toLowerCase()) &&
+        cliente.status == "Ativo"
+      );
+    }
+
+    return cliente.nome.toLowerCase().includes(Filtro.toLowerCase());
   });
 
   return clientesFiltrados;
@@ -15,9 +21,9 @@ export const FiltrarClienteLogic = (InputFiltro) => {
 
 // Path: src/features/Cliente/ClienteTS.tS
 
-export const PegarClientePorId = (id) => {
+export const PegarClientePorId = (Matricula) => {
   const clientesFiltrados = Cliente.filter((cliente) => {
-    if (cliente.id == id) {
+    if (cliente.Matricula == Matricula) {
       return cliente;
     } else {
       return null;

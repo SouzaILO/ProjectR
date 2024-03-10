@@ -1,7 +1,16 @@
 import React from "react";
 import Header from "../../Components/Header";
 import PageFrame from "../../Components/PageFrame";
-import { Box, Button, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import ClienteForm from "../../Components/Formularios/ClienteForm";
 
@@ -26,14 +35,32 @@ const NovoCliente = () => {
           </Flex>
           <Flex
             display={"flex"}
-            flexDirection={"column"}
             bg={"blue.200"}
+            flexDirection={"column"}
             w={"100%"}
             h={"90%"}
             p={4}
             borderRadius={"10px"}
           >
-            <ClienteForm />
+            <Tabs>
+              <TabList>
+                <Tab>Aluno</Tab>
+                <Tab>Responsavel</Tab>
+                <Tab>Three</Tab>
+              </TabList>
+
+              <TabPanels>
+                <TabPanel>
+                  <ClienteForm />
+                </TabPanel>
+                <TabPanel>
+                  <p>Responsavel!</p>
+                </TabPanel>
+                <TabPanel>
+                  <p>three!</p>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
           </Flex>
         </Flex>
       </PageFrame>

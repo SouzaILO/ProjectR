@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 const TableComponent = (Filtro) => {
   const Clientes = FiltrarClienteLogic(Filtro);
   Clientes.sort((a, b) => (a.nome > b.nome ? 1 : -1));
-
+  const FiltroCheck = Filtro.FiltroAtivo;
   return (
     <TableContainer
       border={"0px"}
@@ -38,27 +38,35 @@ const TableComponent = (Filtro) => {
           <Tr>
             {/*Cabecalho*/}
             <Td>Nome</Td>
-            <Td>CPF</Td>
-            <Td>Telefone</Td>
-            <Td>Email</Td>
+            <Td>Status</Td>
+            <Td>Responsavel</Td>
+            <Td>Estabelecimento de Ensino</Td>
           </Tr>
         </Thead>
         <Tbody>
           {Clientes.map((cliente, index) => {
             return (
               index < 10 && (
-                <Tr key={cliente.id}>
+                <Tr key={cliente.Matricula}>
                   <Td>
-                    <Link to={"/cliente/" + cliente.id}>{cliente.nome}</Link>
+                    <Link to={"/cliente/" + cliente.Matricula}>
+                      {cliente.nome}
+                    </Link>
                   </Td>
                   <Td>
-                    <Link to={"/cliente/" + cliente.id}>{cliente.cpf}</Link>
+                    <Link to={"/cliente/" + cliente.Matricula}>
+                      {cliente.status}
+                    </Link>
                   </Td>
                   <Td>
-                    <Link to={"/cliente/" + cliente.id}>{cliente.phone}</Link>
+                    <Link to={"/cliente/" + cliente.Matricula}>
+                      {cliente.responsavel}
+                    </Link>
                   </Td>
                   <Td>
-                    <Link to={"/cliente/" + cliente.id}>{cliente.email}</Link>
+                    <Link to={"/cliente/" + cliente.Matricula}>
+                      {cliente.estabelecimentoEnsino}
+                    </Link>
                   </Td>
                 </Tr>
               )

@@ -16,11 +16,16 @@ const ClienteEdit = () => {
         {Cliente.map((clienteMapa) => {
           return (
             <Box w={"100%"} h={"100%"} bg={"blue.100"}>
-              <Text>Cliente ID: {clienteMapa.id}</Text>
+              <Text>Cliente ID: {clienteMapa.Matricula}</Text>
               <Text>Nome: {clienteMapa.nome}</Text>
-              <Text>CPF: {clienteMapa.cpf}</Text>
-              <Text>Telefone: {clienteMapa.phone}</Text>
-              <Text>Email: {clienteMapa.email}</Text>
+              <Text>Sexo: {clienteMapa.sexo}</Text>
+              <Text>Data de Nascimento: {clienteMapa.dataNascimento}</Text>
+              <Text>Responsavel: {clienteMapa.responsavel}</Text>
+              <Text>
+                Estabelecimento de Ensino: {clienteMapa.estabelecimentoEnsino}
+              </Text>
+              <Text>Status: {clienteMapa.status}</Text>
+              <Text>nivelEscolar: {clienteMapa.nivelEscolar}</Text>
             </Box>
           );
         })}

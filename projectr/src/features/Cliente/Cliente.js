@@ -1,7 +1,7 @@
 import React from "react";
 import PageFrame from "../../Components/PageFrame";
 import Header from "../../Components/Header";
-import { Button, Flex, Input } from "@chakra-ui/react";
+import { Button, Checkbox, Flex, Input } from "@chakra-ui/react";
 import TableComponent from "../../Components/Tabelas/TableCliente";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,6 +10,11 @@ import { Link } from "react-router-dom";
 
 const Cliente = () => {
   const [FiltroIn, setFiltroIn] = useState("");
+  const [FiltroAtivo, setFiltroAtivo] = useState(false);
+
+  const handeCheckFiltro = () => {
+    setFiltroAtivo(!FiltroAtivo);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,6 +45,13 @@ const Cliente = () => {
                   value={FiltroIn}
                   onChange={(e) => setFiltroIn(e.target.value)}
                 />
+                <Checkbox
+                  colorScheme="green"
+                  margin={"10px"}
+                  onChange={(e) => handeCheckFiltro()}
+                >
+                  Mostrar Ativos
+                </Checkbox>
               </form>
             </Flex>
             <Link to={"/Cadastro/Cliente"}>
@@ -47,7 +59,7 @@ const Cliente = () => {
             </Link>
           </Flex>
 
-          <TableComponent Filtro={FiltroIn} />
+          <TableComponent Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} />
         </Flex>
       </PageFrame>
     </div>

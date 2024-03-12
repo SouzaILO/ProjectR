@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import {
   Box,
   Button,
@@ -8,26 +8,11 @@ import {
   HStack,
   Input,
   VStack,
-} from "@chakra-ui/react";
-import * as Yup from "yup";
-import { useFormik } from "formik";
-import NavLeft from "../../Components/NavLeft";
+} from '@chakra-ui/react'
+import NavLeft from '../../Components/Nav/NavLeft'
 
 const Login = () => {
-  const formik = useFormik({
-    initialValues: {
-      usuario: "",
-      senha: "",
-    },
-    validationSchema: Yup.object({
-      usuario: Yup.string().required("Campo obrigatório"),
-      senha: Yup.string().required("Campo obrigatório"),
-    }),
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
-
+  
   return (
     <HStack
       display="flex"
@@ -37,7 +22,7 @@ const Login = () => {
       h="100vh"
       backgroundColor="#4A5568"
     >
-      <VStack id="navleft" marginLeft={"10px"} marginTop={"50px"}>
+      <VStack id="navleft" marginLeft={'10px'} marginTop={'50px'}>
         <NavLeft />
       </VStack>
 
@@ -57,7 +42,7 @@ const Login = () => {
         flexDirection="column"
       >
         <img
-          src={require("../../assets/img/resolucaologo.png")}
+          src={require('../../../assets/img/resolucaologo.png')}
           alt="resolucaoLogo"
         />
         <Box display="flex" alignItems="center">
@@ -67,7 +52,7 @@ const Login = () => {
               type="text"
               borderColor="black"
               focusBorderColor="#1A202C"
-              {...formik.getFieldProps("usuario")}
+              
             />
             <FormErrorMessage>Usuário inválido</FormErrorMessage>
 
@@ -76,7 +61,6 @@ const Login = () => {
               type="password"
               borderColor="black"
               focusBorderColor="#1A202C"
-              {...formik.getFieldProps("senha")}
             />
             <FormErrorMessage>Usuário inválido</FormErrorMessage>
           </FormControl>
@@ -86,7 +70,7 @@ const Login = () => {
         </Button>
       </Box>
     </HStack>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

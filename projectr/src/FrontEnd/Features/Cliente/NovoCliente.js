@@ -1,6 +1,6 @@
-import React from "react";
-import Header from "../../Components/Header";
-import PageFrame from "../../Components/PageFrame";
+import React from 'react'
+import Header from '../../../FrontEnd/Components/Nav/Header'
+import PageFrame from '../../Components/Frames/PageFrame'
 import {
   Box,
   Button,
@@ -10,37 +10,38 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
-} from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import ClienteForm from "../../Components/Formularios/ClienteForm";
+} from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
+import ClienteForm from '../../Components/Formulario/ClienteForm'
 
 const NovoCliente = () => {
   return (
     <div>
       <Header />
       <PageFrame>
-        <Flex display={"flex"} flexDirection={"column"} w={"100%"} h={"100%"}>
+        <Flex display={'flex'} flexDirection={'column'} w={'100%'} h={'100%'}>
           <Flex
-            display={"flex"}
-            flexDirection={"row"}
-            justifyContent={"center"}
-            w={"100%"}
-            h={"5%"}
+            display={'flex'}
+            flexDirection={'row'}
+            justifyContent={'center'}
+            w={'100%'}
+            h={'5%'}
           >
-            <Box marginLeft={"90%"}>
-              <Link to={"/cliente"}>
+            <Box marginLeft={'90%'}>
+              <Link to={'/cliente'}>
                 <Button>Voltar</Button>
               </Link>
             </Box>
           </Flex>
+          
           <Flex
-            display={"flex"}
-            bg={"blue.200"}
-            flexDirection={"column"}
-            w={"100%"}
-            h={"90%"}
+            display={'flex'}
+            bg={'blue.200'}
+            flexDirection={'column'}
+            w={'100%'}
+            h={'90%'}
             p={4}
-            borderRadius={"10px"}
+            borderRadius={'10px'}
           >
             <Tabs>
               <TabList>
@@ -65,7 +66,7 @@ const NovoCliente = () => {
         </Flex>
       </PageFrame>
     </div>
-  );
-};
+  )
+}
 
-export default NovoCliente;
+export default NovoCliente

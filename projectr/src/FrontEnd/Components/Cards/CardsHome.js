@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react'
+
 import {
   Text,
   Heading,
@@ -8,22 +9,23 @@ import {
   CardBody,
   CardFooter,
   SimpleGrid,
-} from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+} from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
+
 
 const CardsHome = (Info) => {
   return (
     <SimpleGrid
-      display={"flex"}
-      flexDirection={"row"}
-      justifyContent={"center"}
-      marginTop={"5%"}
-      w={"100%"}
-      h={"35%"}
+      display={'flex'}
+      flexDirection={'row'}
+      justifyContent={'center'}
+      marginTop={'5%'}
+      w={'100%'}
+      h={'35%'}
       spacing={4}
       templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
     >
-      <Card h={"100%"}>
+      <Card h={'100%'}>
         <CardHeader>
           <Heading size="md">{Info.Head}</Heading>
         </CardHeader>
@@ -37,7 +39,7 @@ const CardsHome = (Info) => {
         </CardFooter>
       </Card>
     </SimpleGrid>
-  );
-};
+  )
+}
 
-export default CardsHome;
+export default CardsHome

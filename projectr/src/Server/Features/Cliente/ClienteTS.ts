@@ -1,33 +1,33 @@
-import { Cliente } from "../../Data/ClienteData.js";
+import { Cliente } from '../../../Data/ClienteData.js'
 export const FiltrarClienteLogic = (InputFiltro) => {
-  const Filtro = InputFiltro.Filtro;
-  const Check = InputFiltro.FiltroAtivo;
+  const Filtro = InputFiltro.Filtro
+  const Check = InputFiltro.FiltroAtivo
 
   const clientesFiltrados = Cliente.filter((cliente) => {
     if (Check == true) {
       return (
         cliente.nome.toLowerCase().includes(Filtro.toLowerCase()) &&
-        cliente.status == "Ativo"
-      );
+        cliente.status == 'Ativo'
+      )
     }
+    return cliente.nome.toLowerCase().includes(Filtro.toLowerCase())
+  })
 
-    return cliente.nome.toLowerCase().includes(Filtro.toLowerCase());
-  });
-
-  return clientesFiltrados;
-};
+  return clientesFiltrados
+}
 
 // Pegar dados do cliente por id
 
 // Path: src/features/Cliente/ClienteTS.tS
 
+
 export const PegarClientePorId = (Matricula) => {
   const clientesFiltrados = Cliente.filter((cliente) => {
     if (cliente.Matricula == Matricula) {
-      return cliente;
+      return cliente
     } else {
-      return null;
+      return null
     }
-  });
-  return clientesFiltrados;
-};
+  })
+  return clientesFiltrados
+}

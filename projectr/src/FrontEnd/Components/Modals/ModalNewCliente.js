@@ -6,16 +6,17 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-} from "@chakra-ui/react";
-import React from "react";
-import { Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
-import { useDisclosure } from "@chakra-ui/react";
+} from '@chakra-ui/react'
+import React from 'react'
+import { Button, FormControl, FormLabel, Input } from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/react'
+
 
 const ModalNovoCliente = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const initialRef = React.useRef(null);
-  const finalRef = React.useRef(null);
+  const initialRef = React.useRef(null)
+  const finalRef = React.useRef(null)
 
   return (
     <>
@@ -59,7 +60,7 @@ const ModalNovoCliente = () => {
         </ModalContent>
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default ModalNovoCliente;
+export default ModalNovoCliente

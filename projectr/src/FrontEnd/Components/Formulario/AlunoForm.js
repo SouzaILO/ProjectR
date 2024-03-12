@@ -36,7 +36,7 @@ import { redirect } from 'react-router-dom'
 
  */
 
-const NovoCliente = () => {
+const NovoAluno = () => {
   const [FormCliente, setFormCliente] = useState({
     nome: '',
     sexo: '',
@@ -69,7 +69,7 @@ const NovoCliente = () => {
     >
       <Flex w={'100%'} bg={'blue.200'} justifyContent={'center'}>
         <form onSubmit={handleSubmit}>
-          <Grid templateColumns="repeat(2, 1fr)" gap={3} w={'100%'} h={'100%'}>
+          <Grid templateColumns="repeat(3, 1fr)" gap={3} w={'100%'} h={'100%'}>
             <FormControl id="nome">
               <FormLabel>Nome</FormLabel>
               <Input
@@ -197,7 +197,7 @@ const NovoCliente = () => {
                 ))}
               </Select>
             </FormControl>
-            <FormControl ml={'50%'} id="status">
+            <FormControl  id="status">
               <FormLabel>Status</FormLabel>
               <Select
                 bg={'white'}
@@ -231,4 +231,4 @@ const NovoCliente = () => {
     </Flex>
   )
 }
-export default NovoCliente
+export default NovoAluno

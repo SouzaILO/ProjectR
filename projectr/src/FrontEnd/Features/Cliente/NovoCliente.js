@@ -12,7 +12,8 @@ import {
   Tabs,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import ClienteForm from '../../Components/Formulario/ClienteForm'
+import AlunoForm from '../../Components/Formulario/AlunoForm'
+import ResponsavelForm from '../../Components/Formulario/ResponsavelForm'
 
 const NovoCliente = () => {
   return (
@@ -52,10 +53,10 @@ const NovoCliente = () => {
 
               <TabPanels>
                 <TabPanel>
-                  <ClienteForm />
+                  <AlunoForm />
                 </TabPanel>
                 <TabPanel>
-                  <p>Responsavel!</p>
+                  <ResponsavelForm />
                 </TabPanel>
                 <TabPanel>
                   <p>three!</p>

@@ -9,7 +9,7 @@ import {
   Input,
   VStack,
 } from '@chakra-ui/react'
-import NavLeft from '../../Components/Nav/NavLeft'
+import NavLeft from '../../Components/Nav/NavLeft.tsx'
 
 const Login = () => {
   
@@ -28,7 +28,6 @@ const Login = () => {
 
       <Box
         border="0px"
-        spacing={4}
         backgroundColor="#2B6CB0"
         minWidth="500px"
         minHeight="500px"

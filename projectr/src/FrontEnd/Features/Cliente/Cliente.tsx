@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
-import PageFrame from '../../Components/Frames/PageFrame'
-import Header from '../../../FrontEnd/Components/Nav/Header'
+import PageFrame from '../../Components/Frames/PageFrame.tsx'
+import Header from '../../Components/Nav/Header.tsx'
 import { Button, Checkbox, Flex, Input } from '@chakra-ui/react'
-import TableComponent from '../../Components/Tabelas/TableCliente'
+import TableComponent from '../../Components/Tabelas/TableCliente.tsx'
 import { useState } from 'react'
 
 //TODO Fazer com que cada fileira da tabela seja clicavel e redirecione para a pagina de detalhes do cliente OU abrir um modal com os detalhes do cliente

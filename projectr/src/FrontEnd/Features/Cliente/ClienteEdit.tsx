@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../../../FrontEnd/Components/Nav/Header'
-import PageFrame from '../../Components/Frames/PageFrame'
+import Header from '../../Components/Nav/Header.tsx'
+import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import { useParams } from 'react-router'
 import { Box, Text } from '@chakra-ui/react'
 import { PegarClientePorId } from '../../../Server/Features/Cliente/ClienteTS.ts'
@@ -11,7 +11,7 @@ const ClienteEdit = () => {
 
   
   return (
-    <div width={'100%'} height={'100%'}>
+    <div >
       <Header />
       <PageFrame>
         {Cliente.map((clienteMapa) => {

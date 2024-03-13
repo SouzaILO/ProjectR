@@ -38,6 +38,7 @@ import { redirect } from 'react-router-dom'
 
 const NovoAluno = () => {
   const [FormCliente, setFormCliente] = useState({
+    Matricula: 0,
     nome: '',
     sexo: '',
     dataNascimento: '',
@@ -113,7 +114,7 @@ const NovoAluno = () => {
                     dataNascimento: e.target.value,
                   })
                 }
-                value={FormCliente.dataNasciment}
+                value={FormCliente.dataNascimento}
               />
               <FormErrorMessage>{}</FormErrorMessage>
             </FormControl>
@@ -188,7 +189,7 @@ const NovoAluno = () => {
                 onChange={(e) =>
                   setFormCliente({ ...FormCliente, anoEscolar: e.target.value })
                 }
-                value={FormCliente.ano}
+                value={FormCliente.anoEscolar}
               >
                 {anoEscolar.map((ano) => (
                   <option key={ano} value={ano}>

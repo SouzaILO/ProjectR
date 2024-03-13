@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react'
 import React from 'react'
-import NavLeft from '../Nav/NavLeft'
+import NavLeft from '../Nav/NavLeft.tsx'
 import PropTypes from 'prop-types'
 
 
@@ -13,9 +13,7 @@ import PropTypes from 'prop-types'
 
 const PageFrame = ({ children }) => {
 
-  PageFrame.propTypes = {
-    children: PropTypes.node.isRequired,
-  }
+  
 
   return (
     <Flex>

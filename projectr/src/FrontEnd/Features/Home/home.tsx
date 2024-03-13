@@ -1,7 +1,7 @@
 import React from 'react'
-import PageFrame from '../../Components/Frames/PageFrame'
-import Header from '../../Components/Nav/Header'
-import CardsHome from '../../Components/Cards/CardsHome'
+import PageFrame from '../../Components/Frames/PageFrame.tsx'
+import Header from '../../Components/Nav/Header.tsx'
+import CardsHome from '../../Components/Cards/CardsHome.tsx'
 
 
 const Home = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../../../FrontEnd/Components/Nav/Header'
-import PageFrame from '../../Components/Frames/PageFrame'
+import Header from '../../Components/Nav/Header.tsx'
+import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import {
   Box,
   Button,
@@ -12,8 +12,8 @@ import {
   Tabs,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import AlunoForm from '../../Components/Formulario/AlunoForm'
-import ResponsavelForm from '../../Components/Formulario/ResponsavelForm'
+import AlunoForm from '../../Components/Formulario/AlunoForm.tsx'
+import ResponsavelForm from '../../Components/Formulario/ResponsavelForm.tsx'
 
 const NovoCliente = () => {
   return (

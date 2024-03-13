@@ -15,9 +15,10 @@ import {
   nivelEscolar,
   anoEscolar,
   Cliente,
-} from '../../../Data/ClienteData.js'
+} from '../../../Data/ClienteData.ts'
 import { useState } from 'react'
 import { redirect } from 'react-router-dom'
+
 // Componente que renderiza um formulario para adicionar um novo cliente
 // Exemplo de uso:
 //

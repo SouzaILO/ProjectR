@@ -3,8 +3,9 @@ import React from 'react'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import Header from '../../Components/Nav/Header.tsx'
 import { Button, Checkbox, Flex, Input } from '@chakra-ui/react'
-import TableComponent from '../../Components/Tabelas/TableCliente.tsx'
+import TabelaCliente from '../../Components/Tabelas/TableCliente.tsx'
 import { useState } from 'react'
+
 
 //TODO Fazer com que cada fileira da tabela seja clicavel e redirecione para a pagina de detalhes do cliente OU abrir um modal com os detalhes do cliente
 
@@ -55,11 +56,11 @@ const Cliente = () => {
               </form>
             </Flex>
             <Link to={'/Cadastro/Cliente'}>
-              <Button>Novo Cliente</Button>
+              <Button>Novo Funcionario</Button>
             </Link>
           </Flex>
 
-          <TableComponent Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} />
+          <TabelaCliente Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} />
         </Flex>
       </PageFrame>
     </div>

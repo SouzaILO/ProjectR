@@ -3,7 +3,7 @@ import Header from '../../Components/Nav/Header.tsx'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import { useParams } from 'react-router'
 import { Box, Text } from '@chakra-ui/react'
-import { PegarClientePorId } from '../../../Server/Features/Cliente/ClienteTS.ts'
+import { PegarClientePorId } from '../../../Server/Features/Cliente/TabelaClienteLogica.ts'
 
 const ClienteEdit = () => {
   const { id } = useParams()
@@ -21,7 +21,7 @@ const ClienteEdit = () => {
               <Text>{clienteMapa.Matricula}</Text>
               <Text>{clienteMapa.status}</Text>
               <Text>{clienteMapa.responsavel}</Text>
-              <Text>{clienteMapa.estabelecimento}</Text>
+              <Text>{clienteMapa.estabelecimentoEnsino}</Text>
             </Box>
           )
         })}

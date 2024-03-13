@@ -13,20 +13,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function NavLeft() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
-  
+  const { isOpen, onOpen, onClose } = useDisclosure() 
 
   return (
     <>
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
+      <Button colorScheme="teal" onClick={onOpen}>
         NavLeft
       </Button>
       <Drawer
         isOpen={isOpen}
         placement="left"
         onClose={onClose}
-        finalFocusRef={btnRef}
         size={'xs'}
       >
         <DrawerOverlay />

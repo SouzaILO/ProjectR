@@ -4,7 +4,10 @@ import Header from '../../Components/Nav/Header.tsx'
 import CardsHome from '../../Components/Cards/CardsHome.tsx'
 
 
+
 const Home = () => {
+  
+
   return (
     <div>
       <Header />
@@ -19,7 +22,7 @@ const Home = () => {
           Head={'Funcionarios'}
           Body={'Buscar todos Funcionarios'}
           Button={'Buscar Funcionarios'}
-          Link={'/funcionarios'}
+          Link={'/funcionario'}
         />
         <CardsHome
           Head={'Agenda'}

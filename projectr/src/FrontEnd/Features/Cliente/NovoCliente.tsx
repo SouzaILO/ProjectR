@@ -12,12 +12,13 @@ import {
   Tabs,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import AlunoForm from '../../Components/Formulario/AlunoForm.tsx'
-import ResponsavelForm from '../../Components/Formulario/ResponsavelForm.tsx'
+import AlunoForm from '../../Components/Formulario/NovoAlunoForm.tsx'
+import ResponsavelForm from '../../Components/Formulario/NovoResponsavelForm.tsx'
 
 const NovoCliente = () => {
   return (
     <div>
+      
       <Header />
       <PageFrame>
         <Flex display={'flex'} flexDirection={'column'} w={'100%'} h={'100%'}>

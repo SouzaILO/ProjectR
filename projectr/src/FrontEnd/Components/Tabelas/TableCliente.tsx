@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiltrarClienteLogic } from '../../../Server/Features/Cliente/ClienteTS.ts'
+import { FiltrarClienteLogic } from '../../../Server/Features/Cliente/TabelaClienteLogica.ts'
 import {
   Table,
   Thead,

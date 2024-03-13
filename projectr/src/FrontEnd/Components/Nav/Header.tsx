@@ -58,9 +58,16 @@ const Header = (props) => {
         alignItems="center"
         flexGrow={1}
       >
-        <MenuItems></MenuItems>
-        <MenuItems></MenuItems>
-        <MenuItems></MenuItems>
+        <MenuItems>
+          <Link to={'/home'}>Home</Link>
+        </MenuItems>
+        <MenuItems>
+          <Link to={'/Cliente'}>Clientes</Link>
+        </MenuItems>
+        <MenuItems>
+          <Link to={'/Funcionario'}>Funcionários</Link>
+        </MenuItems>
+
       </Box>
             <Box
               display={{ sm: show ? 'block' : 'none', md: 'block' }}

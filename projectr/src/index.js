@@ -6,8 +6,12 @@ import Login from './FrontEnd/Features/Login/login.tsx'
 import Home from './FrontEnd/Features/Home/home.tsx'
 import Cliente from './FrontEnd/Features/Cliente/Cliente.tsx'
 import ClienteEdit from './FrontEnd/Features/Cliente/ClienteEdit.tsx'
+import FuncionarioEdit from './FrontEnd/Features/Funcionarios/FuncionarioEdit.tsx'
 import ClienteNovo from './FrontEnd/Features/Cliente/NovoCliente.tsx'
+import NovoFuncionario from './FrontEnd/Features/Funcionarios/NovoFuncionario.tsx'
+import Funcionarios from './FrontEnd/Features/Funcionarios/Funcionario.tsx'
 import { ChakraProvider } from '@chakra-ui/react'
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -23,6 +27,10 @@ root.render(
           <Route path="/cliente" element={<Cliente />} />
           <Route path="/cliente/:id" element={<ClienteEdit />} />
           <Route path="/Cadastro/Cliente" element={<ClienteNovo />} />
+          <Route path="/Cadastro/funcionario" element={<NovoFuncionario />} />
+          <Route path="/funcionario" element={<Funcionarios />} />
+          <Route path="/funcionario/:id" element={<FuncionarioEdit />} />
+
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

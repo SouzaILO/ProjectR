@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import React from 'react' // Import React package
 
 import PropTypes from 'prop-types'
+import NavLeft from './NavLeft.tsx'
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
@@ -58,9 +59,17 @@ const Header = (props) => {
         alignItems="center"
         flexGrow={1}
       >
+
+        <MenuItems>
+          <NavLeft />
+        </MenuItems>
         <MenuItems>
           <Link to={'/home'}>Home</Link>
         </MenuItems>
+        <MenuItems >
+          <Link to={'/Agenda'}>Agenda</Link>
+        </MenuItems>
+
         <MenuItems>
           <Link to={'/Cliente'}>Clientes</Link>
         </MenuItems>

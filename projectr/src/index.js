@@ -10,7 +10,9 @@ import FuncionarioEdit from './FrontEnd/Features/Funcionarios/FuncionarioEdit.ts
 import ClienteNovo from './FrontEnd/Features/Cliente/NovoCliente.tsx'
 import NovoFuncionario from './FrontEnd/Features/Funcionarios/NovoFuncionario.tsx'
 import Funcionarios from './FrontEnd/Features/Funcionarios/Funcionario.tsx'
+import Agenda from './FrontEnd/Features/Agenda/agenda.tsx'
 import { ChakraProvider } from '@chakra-ui/react'
+
 
 
 
@@ -30,7 +32,7 @@ root.render(
           <Route path="/Cadastro/funcionario" element={<NovoFuncionario />} />
           <Route path="/funcionario" element={<Funcionarios />} />
           <Route path="/funcionario/:id" element={<FuncionarioEdit />} />
-
+          <Route path="/agenda" element={<Agenda />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

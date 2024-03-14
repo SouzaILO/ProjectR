@@ -17,9 +17,9 @@ function NavLeft() {
 
   return (
     <>
-      <Button colorScheme="teal" onClick={onOpen}>
-        NavLeft
-      </Button>
+      <button onClick={onOpen}>
+        |||
+      </button>
       <Drawer
         isOpen={isOpen}
         placement="left"

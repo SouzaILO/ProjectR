@@ -56,7 +56,7 @@ const Cliente = () => {
               </form>
             </Flex>
             <Link to={'/Cadastro/Cliente'}>
-              <Button>Novo Funcionario</Button>
+              <Button>Novo Cliente</Button>
             </Link>
           </Flex>
 

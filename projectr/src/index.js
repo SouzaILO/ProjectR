@@ -11,6 +11,7 @@ import ClienteNovo from './FrontEnd/Features/Cliente/NovoCliente.tsx'
 import NovoFuncionario from './FrontEnd/Features/Funcionarios/NovoFuncionario.tsx'
 import Funcionarios from './FrontEnd/Features/Funcionarios/Funcionario.tsx'
 import Agenda from './FrontEnd/Features/Agenda/agenda.tsx'
+import AgendaIndividual from './FrontEnd/Features/Agenda/AgendaIndividual.tsx'
 import { ChakraProvider } from '@chakra-ui/react'
 
 
@@ -33,6 +34,7 @@ root.render(
           <Route path="/funcionario" element={<Funcionarios />} />
           <Route path="/funcionario/:id" element={<FuncionarioEdit />} />
           <Route path="/agenda" element={<Agenda />} />
+          <Route path="/agenda/individual" element={<AgendaIndividual />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

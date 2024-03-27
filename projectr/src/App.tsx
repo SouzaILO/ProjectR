@@ -32,7 +32,11 @@ const App: React.FunctionComponent<IApplicationProps> = (props) => {
                       </AuthRoute>
                   }
               />
-              <Route path="/cliente" element={<AuthRoute><Cliente /></AuthRoute>} />
+              <Route path="/cliente" 
+                      element={
+                        <AuthRoute>
+                          <Cliente />
+                        </AuthRoute>} />
               <Route path="/cliente/:id" element={<AuthRoute><ClienteEdit /></AuthRoute>} />
               <Route path="/Cadastro/Cliente" element={<AuthRoute><ClienteNovo /></AuthRoute>} />
               <Route path="/Cadastro/funcionario" element={<AuthRoute><NovoFuncionario /></AuthRoute>} />

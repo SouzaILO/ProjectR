@@ -24,10 +24,6 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if(User === '' || Password === '') {
-      setIsError(true)
-      setErrorMessage('Por favor, preencha todos os campos')
-    }
     try {
       await signInWithEmailAndPassword(auth, User, Password)
       navigate('/')
@@ -69,7 +65,6 @@ const Login = () => {
           src={require('../../../assets/img/resolucaologo.png')}
           alt="resolucaoLogo"
         />
-        <NavLeft />
         <Box display="flex" alignItems="center">
           <form  onSubmit={handleSubmit}>
 

@@ -5,6 +5,7 @@ import React from 'react' // Import React package
 
 import PropTypes from 'prop-types'
 import NavLeft from './NavLeft.tsx'
+import { getAuth, signOut } from 'firebase/auth'
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
@@ -16,6 +17,7 @@ MenuItems.propTypes = {
 }
 
 const Header = (props) => {
+  const auth = getAuth()
   const [show, setShow] = React.useState(false)
   const handleToggle = () => setShow(!show)
 
@@ -31,7 +33,7 @@ const Header = (props) => {
       {...props}
     >
       <Flex align="center" mr={5} ml={'50px'}>
-        <Link to={'/home'}>
+        <Link to={'/'}>
           <img
             src={require('../../../assets/img/resolucaologo.png')}
             alt="resolucaoLogo"
@@ -64,7 +66,7 @@ const Header = (props) => {
           <NavLeft />
         </MenuItems>
         <MenuItems>
-          <Link to={'/home'}>Home</Link>
+          <Link to={'/'}>Home</Link>
         </MenuItems>
         <MenuItems >
           <Link to={'/Agenda'}>Agenda</Link>
@@ -83,7 +85,7 @@ const Header = (props) => {
               mt={{ base: 4, md: 0 }}
               mr={'50px'}
             >
-              <Button bg="transparent" border="1px" marginRight={'10px'} size={'sm'}>
+              <Button bg="transparent" border="1px" marginRight={'10px'} size={'sm'} onClick={() => signOut(auth)}>
                 Sair
               </Button>
             </Box>

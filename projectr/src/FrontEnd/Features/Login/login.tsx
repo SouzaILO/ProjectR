@@ -10,25 +10,36 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import NavLeft from '../../Components/Nav/NavLeft.tsx'
-import login from '../../../Server/Features/Login/Login.ts'
+import { useNavigate } from 'react-router-dom'
+import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 
 const Login = () => {
-
+  const auth = getAuth()
+  const navigate = useNavigate()
   const [User, setUser] = useState('')
   const [Password, setPassword] = useState('')
-  const [Erro, setError] = useState('')
-
+  const [errorMessage, setErrorMessage] = useState('')
+  const [isError, setIsError] = useState(false)
   
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    const Login = {
-      User: User,
-      Password: Password
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if(User === '' || Password === '') {
+      setIsError(true)
+      setErrorMessage('Por favor, preencha todos os campos')
     }
-    login(Login)
-  }
+    try {
+      await signInWithEmailAndPassword(auth, User, Password)
+      navigate('/')
+    } catch (error) {
+      setIsError(true)
+      setErrorMessage('Usuário ou senha incorretos')
+    }
+
   
+}
+
+
   return (
     <HStack
       display="flex"
@@ -60,8 +71,9 @@ const Login = () => {
         />
         <NavLeft />
         <Box display="flex" alignItems="center">
-          <form onSubmit={handleSubmit}>
-          <FormErrorMessage>{Erro}</FormErrorMessage>
+          <form  onSubmit={handleSubmit}>
+
+          
             <FormLabel>Usuário</FormLabel>
             <Input
               type="text"
@@ -74,8 +86,6 @@ const Login = () => {
 
               
             />
-            
-          
             <FormLabel>Senha</FormLabel>
             <Input
               type="password"
@@ -86,8 +96,15 @@ const Login = () => {
                 setPassword(e.target.value)
               }}
             />
+            <p
+            { 
+              ...(isError ? {display: 'block'} : {display: 'none'})
+            }
+              color="red"
+             >{errorMessage}</p>
            <Button type="submit" marginTop="30px">Entrar</Button>
           </form>
+          
         </Box>
       </Box>
     </HStack>

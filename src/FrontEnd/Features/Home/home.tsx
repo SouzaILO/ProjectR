@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import Header from '../../Components/Nav/Header.tsx'
 import CardsHome from '../../Components/Cards/CardsHome.tsx'
+import UserPerm from '../../../Server/DataBase/UserPerm.ts'
+import { Spinner } from '@chakra-ui/react'
+
+
+
 
 
 const Home = () => {
   
-  return (
+   return (
     <div>
+    
+    
+
+      
       <Header />
       <PageFrame>
+        
         <CardsHome
           Head={'Clientes'}
           Body={'Buscar todos Clientes'}
@@ -22,15 +32,27 @@ const Home = () => {
           Button={'Buscar Funcionarios'}
           Link={'/funcionario'}
         />
-        <CardsHome
-          Head={'Agenda'}
-          Body={'Agenda para controle de horarios'}
-          Button={'Abrir Agenda'}
-          Link={'/agenda'}
-        />
+        
+        {
+
+          UserPerm().UserPerm > 9 ? (
+            <CardsHome
+              Head={'Agenda'}
+              Body={'Buscar todos Agendamentos'}
+              Button={'Buscar Agendamentos'}
+              Link={'/agenda'}
+            />
+          ) : null
+
+        }
+       
+
       </PageFrame>
+        
     </div>
   )
 }
+
+
 
 export default Home

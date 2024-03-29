@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import React from 'react'
+import React, { Suspense } from 'react'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import Header from '../../Components/Nav/Header.tsx'
 import { Button, Checkbox, Flex, Input } from '@chakra-ui/react'
@@ -59,10 +59,20 @@ const Cliente = () => {
               <Button>Novo Cliente</Button>
             </Link>
           </Flex>
-
+          <Suspense fallback={<Loading />}>
           <TabelaCliente Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} />
+          </Suspense>
         </Flex>
       </PageFrame>
+    </div>
+  )
+}
+
+function Loading() {
+  console.log('loading')
+  return (
+    <div>
+      <p>Loading...</p>
     </div>
   )
 }

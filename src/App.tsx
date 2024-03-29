@@ -13,17 +13,23 @@ import AgendaIndividual from './FrontEnd/Features/Agenda/AgendaIndividual.tsx'
 import { initializeApp } from 'firebase/app'
 import { firebaseConfig } from './Server/DataBase/firebase.ts'
 import AuthRoute from './FrontEnd/Components/Routes/AuthRoute.tsx'
+import UserPerm from './Server/DataBase/UserPerm.tsx'
 
-initializeApp(firebaseConfig)
+
+export const app = initializeApp(firebaseConfig)
+
 
 export interface IApplicationProps {
   children: React.ReactNode
 }
 
+
+
 const App: React.FunctionComponent<IApplicationProps> = (props) => {
   return (
-      <BrowserRouter>      
+      <BrowserRouter> 
           <Routes>
+          
               <Route
                   path="/"
                   element={
@@ -44,7 +50,8 @@ const App: React.FunctionComponent<IApplicationProps> = (props) => {
               <Route path="/funcionario/:id" element={<AuthRoute><FuncionarioEdit /></AuthRoute>} />
               <Route path="/agenda" element={<AuthRoute><Agenda /></AuthRoute>} />
               <Route path="/agenda/individual" element={<AuthRoute><AgendaIndividual /></AuthRoute>} />
-               
+              
+                      
               <Route path="/login" element={<Login />} />
           </Routes>
       </BrowserRouter>

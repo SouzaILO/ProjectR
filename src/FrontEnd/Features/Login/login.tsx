@@ -75,6 +75,7 @@ const Login = () => {
               borderColor="black"
               focusBorderColor="#1A202C"
               value={User}
+              autoComplete='on'
               onChange={(e) => {
                 setUser(e.target.value)
               }}
@@ -87,6 +88,7 @@ const Login = () => {
               borderColor="black"
               focusBorderColor="#1A202C"
               value={Password}
+              autoComplete='on'
               onChange={(e) => {
                 setPassword(e.target.value)
               }}

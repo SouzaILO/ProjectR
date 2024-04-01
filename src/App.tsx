@@ -1,5 +1,6 @@
 import React from 'react' // Import the 'React' module
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { initializeApp } from 'firebase/app'
 import Login from './FrontEnd/Features/Login/login.tsx'
 import Home from './FrontEnd/Features/Home/home.tsx'
 import Cliente from './FrontEnd/Features/Cliente/Cliente.tsx'
@@ -10,10 +11,12 @@ import NovoFuncionario from './FrontEnd/Features/Funcionarios/NovoFuncionario.ts
 import Funcionarios from './FrontEnd/Features/Funcionarios/Funcionario.tsx'
 import Agenda from './FrontEnd/Features/Agenda/agenda.tsx'
 import AgendaIndividual from './FrontEnd/Features/Agenda/AgendaIndividual.tsx'
-import { initializeApp } from 'firebase/app'
 import { firebaseConfig } from './Server/DataBase/firebase.ts'
 import AuthRoute from './FrontEnd/Components/Routes/AuthRoute.tsx'
 import UserPerm from './Server/DataBase/UserPerm.tsx'
+
+
+
 
 
 export const app = initializeApp(firebaseConfig)

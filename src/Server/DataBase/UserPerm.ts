@@ -1,10 +1,11 @@
 import { getAuth } from 'firebase/auth'
 import {
-  getFirestore,
   collection,
-  getDocs
+  getDocs,
+  getFirestore
 } from 'firebase/firestore'
 import { useState } from 'react'
+
 
 
 

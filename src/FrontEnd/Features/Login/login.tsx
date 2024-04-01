@@ -9,9 +9,10 @@ import {
   Input,
   VStack,
 } from '@chakra-ui/react'
-import NavLeft from '../../Components/Nav/NavLeft.tsx'
 import { useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
+import NavLeft from '../../Components/Nav/NavLeft.tsx'
+
 
 const Login = () => {
   const auth = getAuth()

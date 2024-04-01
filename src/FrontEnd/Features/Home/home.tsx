@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react'
+import { Spinner } from '@chakra-ui/react'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import Header from '../../Components/Nav/Header.tsx'
 import CardsHome from '../../Components/Cards/CardsHome.tsx'
 import UserPerm from '../../../Server/DataBase/UserPerm.ts'
-import { Spinner } from '@chakra-ui/react'
+
 
 
 
@@ -13,9 +14,6 @@ const Home = () => {
   
    return (
     <div>
-    
-    
-
       
       <Header />
       <PageFrame>

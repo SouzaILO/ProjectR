@@ -1,17 +1,17 @@
 import React, { Suspense } from 'react'
 import { Spinner } from '@chakra-ui/react'
+import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import Header from '../../Components/Nav/Header.tsx'
 import CardsHome from '../../Components/Cards/CardsHome.tsx'
-import UserPerm from '../../../Server/DataBase/UserPerm.ts'
-
+import GetUsername from '../../../Server/DataBase/UserPerm.ts'
 
 
  
 
 
 const Home = () => {
-  
+ 
    return (
     <div>
       
@@ -33,14 +33,14 @@ const Home = () => {
         
         {
 
-          UserPerm().UserPerm > 9 ? (
+          //UserPerm().UserPerm > 9 ? (
             <CardsHome
               Head={'Agenda'}
               Body={'Buscar todos Agendamentos'}
               Button={'Buscar Agendamentos'}
               Link={'/agenda'}
             />
-          ) : null
+          //) : null
 
         }
        

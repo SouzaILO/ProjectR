@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import {
   Box,
   Button,
-  FormControl,
-  FormErrorMessage,
   FormLabel,
   HStack,
   Input,
@@ -11,7 +9,8 @@ import {
 } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
-import NavLeft from '../../Components/Nav/NavLeft.tsx'
+import SetUserRedux from '../../../Server/DataBase/auth.ts'
+
  
 
 const Login = () => {
@@ -21,19 +20,25 @@ const Login = () => {
   const [Password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
   const [isError, setIsError] = useState(false)
-  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
+      
       await signInWithEmailAndPassword(auth, User, Password)
+      
+      SetUserRedux()
+
       navigate('/')
+  
     } catch (error) {
+      console.log(error)
       setIsError(true)
       setErrorMessage('Usuário ou senha incorretos')
     }
 
-  
+
 }
 
 

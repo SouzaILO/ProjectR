@@ -1,12 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
-
+import  userReducer  from './features/user.ts'
 
 
 
 const store = configureStore({
   reducer: {
-    
-  },
+    user: userReducer,
+  }
 })
 
-export default store
+export default store 
+
+export type RootState = ReturnType<typeof store.getState>

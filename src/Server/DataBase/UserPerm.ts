@@ -6,13 +6,8 @@ import {
 } from 'firebase/firestore'
 import { useState } from 'react'
 
- 
 
-
-
-
-const UserPerm = () => {
-
+const GetUsername = () => {
     
     const [UserName , setUserName] = useState('')
     const [UserPerm, setUserperm] = useState(0)
@@ -31,17 +26,11 @@ const UserPerm = () => {
             setUserName(doc.data().Name)
 
     }
-
 })
     })
 
 
-  return (
-      {
-        UserName,
-        UserPerm
-      }
-  )
+  return UserName
 }
 
-export default UserPerm
+export default GetUsername

@@ -78,6 +78,9 @@ const Header = (props) => {
         <MenuItems>
           <Link to={'/Funcionario'}>Funcionários</Link>
         </MenuItems>
+        <MenuItems>
+          <Link to={'/contaEdit'}>Minha conta</Link>
+        </MenuItems>
 
       </Box>
             <Box

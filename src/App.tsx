@@ -13,9 +13,10 @@ import Agenda from './FrontEnd/Features/Agenda/agenda.tsx'
 import AgendaIndividual from './FrontEnd/Features/Agenda/AgendaIndividual.tsx'
 import { firebaseConfig } from './Server/DataBase/firebase.ts'
 import AuthRoute from './FrontEnd/Components/Routes/AuthRoute.tsx'
-import UserPerm from './Server/DataBase/UserPerm.tsx'
+import ContaEdit from './FrontEnd/Features/Conta/ContaEdit.tsx'
 
- 
+
+   
 
 
 
@@ -53,8 +54,7 @@ const App: React.FunctionComponent<IApplicationProps> = (props) => {
               <Route path="/funcionario/:id" element={<AuthRoute><FuncionarioEdit /></AuthRoute>} />
               <Route path="/agenda" element={<AuthRoute><Agenda /></AuthRoute>} />
               <Route path="/agenda/individual" element={<AuthRoute><AgendaIndividual /></AuthRoute>} />
-              
-                      
+              <Route path="/contaEdit" element={<AuthRoute><ContaEdit /></AuthRoute>} />
               <Route path="/login" element={<Login />} />
           </Routes>
       </BrowserRouter>

@@ -1,11 +1,11 @@
 
-import { Box, Flex, Text, Button } from '@chakra-ui/react'
+import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import React from 'react' // Import React package
+import React from 'react' // Import React package 
 
 import PropTypes from 'prop-types'
-import NavLeft from './NavLeft.tsx'
 import { getAuth, signOut } from 'firebase/auth'
+import NavLeft from './NavLeft.tsx'
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">

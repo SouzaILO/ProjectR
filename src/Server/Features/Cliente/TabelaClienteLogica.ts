@@ -1,4 +1,4 @@
-import { Cliente } from '../../../Data/ClienteData.ts'
+import { Cliente } from '../../../Data/ClienteData.ts' 
 export const FiltrarClienteLogic = (InputFiltro) => {
   const Filtro = InputFiltro.Filtro
   const Check = InputFiltro.FiltroAtivo

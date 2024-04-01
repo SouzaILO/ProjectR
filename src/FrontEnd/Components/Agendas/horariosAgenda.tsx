@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Flex, Box, Text, Button, Tabs, TabList, Tab, TabPanels, TabPanel, TableContainer, Table, TableCaption, Thead, Td, Tr, Tbody, Select } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Box, Button, Flex, Select, Tab, Table, TableCaption, TableContainer, TabList, TabPanel, TabPanels, Tabs, Tbody, Td, Text, Thead, Tr } from '@chakra-ui/react'
+import { Link } from 'react-router-dom' 
 
 
 //Componente que reder  uma tabela com horarios de 8:00 as 20:00 e recebe o dia da semana com um prop

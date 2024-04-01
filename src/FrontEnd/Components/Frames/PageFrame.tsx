@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react'
 import React from 'react'
+import PropTypes from 'prop-types' 
 import NavLeft from '../Nav/NavLeft.tsx'
-import PropTypes from 'prop-types'
 
 
 

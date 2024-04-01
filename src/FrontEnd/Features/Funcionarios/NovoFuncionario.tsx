@@ -1,6 +1,4 @@
 import React from 'react'
-import Header from '../../Components/Nav/Header.tsx'
-import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import {
   Box,
   Button,
@@ -12,8 +10,10 @@ import {
   Tabs,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import Header from '../../Components/Nav/Header.tsx'
+import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import FuncionarioForm from '../../Components/Formulario/NovoFuncionarioForm.tsx'
-
+ 
 const NovoFuncionario = () => {
   return (
     <div>

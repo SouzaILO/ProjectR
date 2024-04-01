@@ -1,13 +1,13 @@
 import React from 'react'
-import { Flex, Box, Text, Button, Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react'
+import { Box, Button, Flex, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import Header from '../../Components/Nav/Header.tsx'
-import { useParams } from 'react-router'
 import HorariosAgenda from '../../Components/Agendas/horariosAgenda.tsx'
 import CardsHome from '../../Components/Cards/CardsHome.tsx'
 
-
+ 
 
 
 

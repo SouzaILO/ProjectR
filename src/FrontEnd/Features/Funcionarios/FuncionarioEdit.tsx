@@ -1,15 +1,15 @@
 import React from 'react'
-import Header from '../../Components/Nav/Header.tsx'
-import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import { useParams } from 'react-router'
 import { Box, Text } from '@chakra-ui/react'
+import Header from '../../Components/Nav/Header.tsx'
+import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import { PegarFuncionarioPorId } from '../../../Server/Features/Funcionarios/TabelaFuncionarioLogica.ts'
 
 const FuncionarioEdit = () => {
   const { id } = useParams()
   const funcionario = PegarFuncionarioPorId(id)
 
-  
+   
   return (
     <div >
       <Header />

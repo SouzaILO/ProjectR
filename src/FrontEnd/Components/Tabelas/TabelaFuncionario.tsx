@@ -1,12 +1,12 @@
 import React from 'react'
 import {
   Table,
-  Thead,
-  Tbody,
-  Tr,
-  Td,
   TableCaption,
-  TableContainer,
+  TableContainer, 
+  Tbody,
+  Td,
+  Thead,
+  Tr,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { FiltrarFuncionario } from '../../../Server/Features/Funcionarios/TabelaFuncionarioLogica.ts'

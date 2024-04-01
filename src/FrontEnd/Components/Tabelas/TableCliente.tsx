@@ -1,15 +1,15 @@
 import React from 'react'
-import { FiltrarClienteLogic } from '../../../Server/Features/Cliente/TabelaClienteLogica.ts'
 import {
   Table,
-  Thead,
-  Tbody,
-  Tr,
-  Td,
-  TableCaption,
+  TableCaption, 
   TableContainer,
+  Tbody,
+  Td,
+  Thead,
+  Tr,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import { FiltrarClienteLogic } from '../../../Server/Features/Cliente/TabelaClienteLogica.ts'
 //import Clientes from "../../Json/Clientes.json";
 
 // Componente que renderiza uma tabela com os dados passados por props

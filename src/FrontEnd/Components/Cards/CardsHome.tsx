@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react' 
 
 import {
-  Text,
-  Heading,
   Button,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
+  CardHeader,
+  Heading,
   SimpleGrid,
+  Text,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 

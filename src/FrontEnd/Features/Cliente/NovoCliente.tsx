@@ -1,6 +1,4 @@
 import React from 'react'
-import Header from '../../Components/Nav/Header.tsx'
-import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import {
   Box,
   Button,
@@ -8,10 +6,12 @@ import {
   Tab,
   TabList,
   TabPanel,
-  TabPanels,
+  TabPanels, 
   Tabs,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import Header from '../../Components/Nav/Header.tsx'
+import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import AlunoForm from '../../Components/Formulario/NovoAlunoForm.tsx'
 import ResponsavelForm from '../../Components/Formulario/NovoResponsavelForm.tsx'
 

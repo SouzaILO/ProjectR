@@ -1,16 +1,16 @@
 import React from 'react'
+import { useState } from 'react'
+import { Box, Button, Checkbox, Flex, Input, Text } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 import Header from '../../Components/Nav/Header.tsx'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import TabelaFuncionario from '../../Components/Tabelas/TabelaFuncionario.tsx'
-import { useState } from 'react'
-import { Box, Flex, Input, Checkbox, Button, Text } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
 
 const Funcionarios = () => {
   const [FiltroIn, setFiltroIn] = useState('')
   const [FiltroAtivo, setFiltroAtivo] = useState(true)
   
-
+ 
   const handeCheckFiltro = () => {
     setFiltroAtivo(!FiltroAtivo)
   }

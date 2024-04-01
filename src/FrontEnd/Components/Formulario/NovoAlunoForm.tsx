@@ -1,23 +1,23 @@
-import {
+import { 
   Button,
   Flex,
   FormControl,
+  FormErrorMessage,
   FormLabel,
+  Grid,
   Input,
   Select,
-  FormErrorMessage,
-  Grid,
 } from '@chakra-ui/react'
 import React from 'react'
-import {
-  Sexo,
-  Status,
-  nivelEscolar,
-  anoEscolar,
-  Cliente,
-} from '../../../Data/ClienteData.ts'
 import { useState } from 'react'
 import { redirect } from 'react-router-dom'
+import {
+  anoEscolar,
+  Cliente,
+  nivelEscolar,
+  Sexo,
+  Status,
+} from '../../../Data/ClienteData.ts'
 
 // Componente que renderiza um formulario para adicionar um novo cliente
 // Exemplo de uso:

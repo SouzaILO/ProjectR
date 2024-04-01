@@ -1,7 +1,7 @@
 import { Button, Flex, FormControl, FormLabel, Grid, Input, Select } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
-import { 
+import {  
     Status,
   } from '../../../Data/ClienteData.ts'
 

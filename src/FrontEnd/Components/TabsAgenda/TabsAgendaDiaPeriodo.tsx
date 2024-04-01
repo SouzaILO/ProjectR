@@ -1,10 +1,10 @@
-import { TabPanel, Tabs, Tab, TabList,TabPanels} from '@chakra-ui/react'
+import { Tab, TabList, TabPanel, TabPanels,Tabs} from '@chakra-ui/react'
 import React from 'react'
 import HorariosAgenda from '../../Components/Agendas/horariosAgenda.tsx'
 
 
 
-
+ 
 
 
 

@@ -1,7 +1,7 @@
 import { funcionarios } from '../../../Data/Funcionarios.ts'
 export const FiltrarFuncionario = (InputFiltro) => {
     const Filtro = InputFiltro.Filtro
-    const Check = InputFiltro.FiltroAtivo
+    const Check = InputFiltro.FiltroAtivo 
   
     const FuncionariosFiltrados = funcionarios.filter((funcionarios) => {
       if (Check == true) {

@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import React, { Suspense } from 'react'
+import { Button, Checkbox, Flex, Input } from '@chakra-ui/react'
+import { useState } from 'react'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import Header from '../../Components/Nav/Header.tsx'
-import { Button, Checkbox, Flex, Input } from '@chakra-ui/react'
 import TabelaCliente from '../../Components/Tabelas/TableCliente.tsx'
-import { useState } from 'react'
 
 
 //TODO Fazer com que cada fileira da tabela seja clicavel e redirecione para a pagina de detalhes do cliente OU abrir um modal com os detalhes do cliente
@@ -48,7 +48,7 @@ const Cliente = () => {
                 />
                 <Checkbox
                   colorScheme="green"
-                  margin={'10px'}
+                  margin={'10px'} 
                   onChange={(e) => handeCheckFiltro()}
                 >
                   Mostrar Ativos

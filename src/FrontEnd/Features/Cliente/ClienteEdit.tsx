@@ -1,14 +1,14 @@
 import React from 'react'
-import Header from '../../Components/Nav/Header.tsx'
-import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import { useParams } from 'react-router'
 import { Box, Text } from '@chakra-ui/react'
+import Header from '../../Components/Nav/Header.tsx'
+import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import { PegarClientePorId } from '../../../Server/Features/Cliente/TabelaClienteLogica.ts'
 
 const ClienteEdit = () => {
   const { id } = useParams()
   const Cliente = PegarClientePorId(id)
-
+ 
   
   return (
     <div >

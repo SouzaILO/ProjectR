@@ -1,8 +1,8 @@
 
 import { Box, Button, Flex, Text } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import React from 'react' // Import React package 
-
+import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { getAuth, signOut } from 'firebase/auth'
 import NavLeft from './NavLeft.tsx'
@@ -20,7 +20,7 @@ const Header = (props) => {
   const auth = getAuth()
   const [show, setShow] = React.useState(false)
   const handleToggle = () => setShow(!show)
-
+  const navigate = useNavigate()
   return (
     <Flex
       as="nav"
@@ -66,20 +66,19 @@ const Header = (props) => {
           <NavLeft />
         </MenuItems>
         <MenuItems>
-          <Link to={'/'}>Home</Link>
+          <button onClick={() => navigate('/')}>Home</button>
         </MenuItems>
         <MenuItems >
-          <Link to={'/Agenda'}>Agenda</Link>
-        </MenuItems>
-
-        <MenuItems>
-          <Link to={'/Cliente'}>Clientes</Link>
+        <button onClick={() => navigate('/Agenda')}>Agenda</button>
         </MenuItems>
         <MenuItems>
-          <Link to={'/Funcionario'}>Funcionários</Link>
+        <button onClick={() => navigate('/Cliente')}>Clientes</button>
         </MenuItems>
         <MenuItems>
-          <Link to={'/contaEdit'}>Minha conta</Link>
+        <button onClick={() => navigate('/Funcionario')}>Funcionários</button>
+        </MenuItems>
+        <MenuItems>
+        <button onClick={() => navigate('/contaEdit')}>Minha conta</button>
         </MenuItems>
 
       </Box>

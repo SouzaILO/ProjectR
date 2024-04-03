@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
-import SetUserRedux from '../../../Server/DataBase/auth.ts'
+import SetUserRedux from '../../../Server/DataBase/UserInfo.ts'
 
  
 

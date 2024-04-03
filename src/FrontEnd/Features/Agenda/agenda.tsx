@@ -23,12 +23,12 @@ const Agenda = () => {
           Button={'Agenda Individual'}
           Link={'/agenda/individual'}
         />
-        <CardsHome
+        {/* <CardsHome
           Head={'Agenda Reforco'}
           Body={'Buscar todos Funcionarios'}
           Button={'Buscar Funcionarios'}
           Link={'/funcionario'}
-        />
+        /> */}
       </PageFrame>
     </div>
     )

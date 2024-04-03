@@ -31,18 +31,18 @@ const Home = () => {
           Link={'/funcionario'}
         />
         
-        {
+        
+        
 
-          //UserPerm().UserPerm > 9 ? (
             <CardsHome
               Head={'Agenda'}
               Body={'Buscar todos Agendamentos'}
               Button={'Buscar Agendamentos'}
               Link={'/agenda'}
             />
-          //) : null
+          
 
-        }
+        
        
 
       </PageFrame>

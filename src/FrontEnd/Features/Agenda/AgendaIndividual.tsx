@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Select, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
@@ -42,6 +42,13 @@ const AgendaIndividual = () => {
                                 justifyContent={'center'}
                                 gap={'50px'}
                             >
+                                
+                                    <Select maxW={'200px'} color={'black'} placeholder="Escolha um Especialista">
+                                        <option color='black' value="option1">Especialista 1</option>
+                                        <option value="option2">Especialista 2</option>
+                                        <option value="option3">Especialista 3</option>
+                                    </Select>
+                                
                                 <Tab>Segunda</Tab>
                                 <Tab>Terca</Tab>
                                 <Tab>Quarta</Tab>

@@ -57,7 +57,7 @@ const HorariosAgenda = (props) => {
                     <Text>Horario</Text>
                   </Td>
                     <Td>
-                        <Text>Cristiane</Text>
+                      <Text>Especialista:</Text>
                     </Td>
                 </Tr>
               </Thead>
@@ -67,10 +67,10 @@ const HorariosAgenda = (props) => {
                         <Text>6:00</Text>
                     </Td>
                     <Td>
-                        <Select placeholder="Escolha um aluno">
-                        <option value="option1">Aluno 1</option>
-                        <option value="option2">Aluno 2</option>
-                        <option value="option3">Aluno 3</option>
+                        <Select  placeholder="Escolha um aluno">
+                            <option value="option1">Aluno 1</option>
+                            <option value="option2">Aluno 2</option>
+                            <option value="option3">Aluno 3</option>
                         </Select>
                     </Td>
                 </Tr>
@@ -80,9 +80,9 @@ const HorariosAgenda = (props) => {
                     </Td>
                     <Td>
                         <Select placeholder="Escolha um aluno">
-                        <option value="option1">Aluno 1</option>
-                        <option value="option2">Aluno 2</option>
-                        <option value="option3">Aluno 3</option>
+                            <option value="option1">Aluno 1</option>
+                            <option value="option2">Aluno 2</option>
+                            <option value="option3">Aluno 3</option>
                         </Select>
                     </Td>
                 </Tr>
@@ -195,7 +195,7 @@ const HorariosAgenda = (props) => {
                     <Text>Horario</Text>
                   </Td>
                     <Td>
-                        <Text>Cristiane</Text>
+                        <Text>Especialista:</Text>
                     </Td>
                 </Tr>
               </Thead>

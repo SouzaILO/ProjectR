@@ -80,6 +80,9 @@ const Header = (props) => {
         <MenuItems>
         <button onClick={() => navigate('/contaEdit')}>Minha conta</button>
         </MenuItems>
+        <MenuItems>
+        <button onClick={() => navigate('/especialista')}>Especialista</button>
+        </MenuItems>
 
       </Box>
             <Box

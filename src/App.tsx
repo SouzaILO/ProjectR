@@ -14,6 +14,8 @@ import AgendaIndividual from './FrontEnd/Features/Agenda/AgendaIndividual.tsx'
 import { firebaseConfig } from './Server/DataBase/firebaseConfig.ts'
 import AuthRoute from './FrontEnd/Components/Routes/AuthRoute.tsx'
 import ContaEdit from './FrontEnd/Features/Conta/ContaEdit.tsx'
+import Especialista from './FrontEnd/Features/Especialista/Especialista.tsx'
+import NovoEspecialista from './FrontEnd/Features/Especialista/NovoEspecialista.tsx'
 
 
    
@@ -50,11 +52,13 @@ const App: React.FunctionComponent<IApplicationProps> = (props) => {
               <Route path="/cliente/:id" element={<AuthRoute><ClienteEdit /></AuthRoute>} />
               <Route path="/Cadastro/Cliente" element={<AuthRoute><ClienteNovo /></AuthRoute>} />
               <Route path="/Cadastro/funcionario" element={<AuthRoute><NovoFuncionario /></AuthRoute>} />
+              <Route path="/Cadastro/especialista" element={<AuthRoute><NovoEspecialista /></AuthRoute>} />
               <Route path="/funcionario" element={<AuthRoute><Funcionarios /></AuthRoute>} />
               <Route path="/funcionario/:id" element={<AuthRoute><FuncionarioEdit /></AuthRoute>} />
               <Route path="/agenda" element={<AuthRoute><Agenda /></AuthRoute>} />
               <Route path="/agenda/individual" element={<AuthRoute><AgendaIndividual /></AuthRoute>} />
               <Route path="/contaEdit" element={<AuthRoute><ContaEdit /></AuthRoute>} />
+              <Route path="/especialista" element={<AuthRoute><Especialista /></AuthRoute>} />
               <Route path="/login" element={<Login />} />
           </Routes>
       </BrowserRouter>

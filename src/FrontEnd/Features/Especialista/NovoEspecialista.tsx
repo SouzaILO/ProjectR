@@ -13,9 +13,9 @@ import { Link } from 'react-router-dom'
 import Header from '../../Components/Nav/Header.tsx'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import FuncionarioForm from '../../Components/Formulario/NovoFuncionarioForm.tsx'
-import NovoEspecialista from '../../Components/Formulario/NovoEspecialistaForm.tsx'
+import NovoEspecialistaForm from '../../Components/Formulario/NovoEspecialistaForm.tsx'
  
-const NovoFuncionario = () => {
+const NovoEspecialista= () => {
   return (
     <div>
       <Header />
@@ -46,13 +46,12 @@ const NovoFuncionario = () => {
           >
             <Tabs>
               <TabList>
-                <Tab>Funcionario</Tab>
+                <Tab>Especialista</Tab>
               </TabList>
               <TabPanels>
                 <TabPanel>
-                    <FuncionarioForm />
+                    <NovoEspecialistaForm />
                 </TabPanel>
-
               </TabPanels>
             </Tabs>
           </Flex>
@@ -62,4 +61,4 @@ const NovoFuncionario = () => {
   )
 }
 
-export default NovoFuncionario
+export default NovoEspecialista

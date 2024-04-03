@@ -11,7 +11,7 @@ import NovoFuncionario from './FrontEnd/Features/Funcionarios/NovoFuncionario.ts
 import Funcionarios from './FrontEnd/Features/Funcionarios/Funcionario.tsx'
 import Agenda from './FrontEnd/Features/Agenda/agenda.tsx'
 import AgendaIndividual from './FrontEnd/Features/Agenda/AgendaIndividual.tsx'
-import { firebaseConfig } from './Server/DataBase/firebase.ts'
+import { firebaseConfig } from './Server/DataBase/firebaseConfig.ts'
 import AuthRoute from './FrontEnd/Components/Routes/AuthRoute.tsx'
 import ContaEdit from './FrontEnd/Features/Conta/ContaEdit.tsx'
 

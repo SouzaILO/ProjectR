@@ -4,13 +4,13 @@ import { useState } from 'react'
 import {  
     Status,
   } from '../../../Data/ClienteData.ts'
-
+import NovoFuncionario from '../../../Server/Features/Funcionarios/NovoFuncionario.ts'
 
 
 
 
 const NovoFuncionarioForm = () => {
-    const [FormCliente, setFormCliente] = useState({
+    const [FormFunc, setFormFunc] = useState({
         ID: 0,
         nome: '',
         cpf: '',
@@ -43,9 +43,9 @@ const NovoFuncionarioForm = () => {
                 type="text"
                 name="nome"
                 onChange={(e) =>
-                  setFormCliente({ ...FormCliente, nome: e.target.value })
+                  setFormFunc({ ...FormFunc, nome: e.target.value })
                 }
-                value={FormCliente.nome}
+                value={FormFunc.nome}
               />
               
             </FormControl>
@@ -56,9 +56,9 @@ const NovoFuncionarioForm = () => {
                     type="text"
                     name="cpf"
                     onChange={(e) =>
-                    setFormCliente({ ...FormCliente, cpf: e.target.value })
+                      setFormFunc({ ...FormFunc, cpf: e.target.value })
                     }
-                    value={FormCliente.cpf}
+                    value={FormFunc.cpf}
                 />
             </FormControl>
             <FormControl id="cnpj">
@@ -68,9 +68,9 @@ const NovoFuncionarioForm = () => {
                     type="text"
                     name="cnpj"
                     onChange={(e) =>
-                    setFormCliente({ ...FormCliente, cnpj: e.target.value })
+                      setFormFunc({ ...FormFunc, cnpj: e.target.value })
                     }
-                    value={FormCliente.cnpj}
+                    value={FormFunc.cnpj}
                 />
             </FormControl>
             <FormControl id="posicao">
@@ -80,9 +80,9 @@ const NovoFuncionarioForm = () => {
                     type="text"
                     name="posicao"
                     onChange={(e) =>
-                    setFormCliente({ ...FormCliente, posicao: e.target.value })
+                      setFormFunc({ ...FormFunc, posicao: e.target.value })
                     }
-                    value={FormCliente.posicao}
+                    value={FormFunc.posicao}
                 />
             </FormControl>
                 <FormControl  id="status">
@@ -91,9 +91,9 @@ const NovoFuncionarioForm = () => {
                 bg={'white'}
                 name="status"
                 onChange={(e) =>
-                  setFormCliente({ ...FormCliente, status: e.target.value })
+                  setFormFunc({ ...FormFunc, status: e.target.value })
                 }
-                value={FormCliente.status}
+                value={FormFunc.status}
               >
                 {Status.map((status) => (
                   <option key={status} value={status}>
@@ -105,7 +105,7 @@ const NovoFuncionarioForm = () => {
                 
                 </Grid>
             </form>
-            <Button mt={'10px'} colorScheme='purple' type="submit">Enviar</Button>
+            <Button mt={'10px'} colorScheme='purple' type="submit" onClick={() => NovoFuncionario(FormFunc)}>Enviar</Button>
             </Flex>
    
     )

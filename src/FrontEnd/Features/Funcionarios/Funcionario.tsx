@@ -65,7 +65,7 @@ const Funcionarios = () => {
             </Link>
           </Flex>
           
-          <TabelaFuncionario Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} />
+          { <TabelaFuncionario Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} /> }
         </Flex>
       </PageFrame>
     </div>

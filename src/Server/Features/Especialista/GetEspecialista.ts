@@ -22,7 +22,7 @@ async function GetEspecialista(Filtro) {
                 especialista.status == 'Ativo'
             )
           }
-          return especialista.nome.toLowerCase().includes(FiltroIn.toLowerCase())
+          return especialista.Nome.toLowerCase().includes(FiltroIn.toLowerCase())
         }
     )
     

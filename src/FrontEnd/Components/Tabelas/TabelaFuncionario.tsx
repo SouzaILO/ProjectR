@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Table,
   TableCaption,
@@ -9,6 +9,7 @@ import {
   Tr,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import { DocumentData } from 'firebase/firestore'
 import { FiltrarFuncionario } from '../../../Server/Features/Funcionarios/TabelaFuncionarioLogica.ts'
 
 
@@ -18,6 +19,16 @@ import { FiltrarFuncionario } from '../../../Server/Features/Funcionarios/Tabela
 const TabelaFuncionario = (Filtro) => {
 
    const funcionario =  FiltrarFuncionario(Filtro)
+
+   const [FuncinariosArray, setFuncinariosArray] = useState<DocumentData[]>([])
+
+    useEffect(() => {
+            FiltrarFuncionario(Filtro).then((value) => {
+              setFuncinariosArray(value)
+            })
+      }, [Filtro])
+
+   
 
     
     return (
@@ -46,27 +57,27 @@ const TabelaFuncionario = (Filtro) => {
           </Thead>
           
           <Tbody>
-            {funcionario.map((funcio, index) => {
+            {FuncinariosArray.map((funcio, index) => {
               return (
                 index < 10 && (
-                  <Tr key={funcio.ID}>
+                  <Tr key={funcio.id}>
                     <Td>
-                      <Link to={'/funcionario/' + funcio.ID}>
-                        {funcio.nome}
+                      <Link to={'/funcionario/' + funcio.id}>
+                        {funcio.Nome}
                       </Link>
                     </Td>
                     <Td>
-                      <Link to={'/funcionario/' + funcio.ID}>
+                      <Link to={'/funcionario/' + funcio.id}>
                         {funcio.status}
                       </Link>
                     </Td>
                     <Td>
-                      <Link to={'/funcionario/' + funcio.ID}>
+                      <Link to={'/funcionario/' + funcio.id}>
                         {funcio.cpf}
                       </Link>
                     </Td>
                     <Td>
-                      <Link to={'/funcionario/' + funcio.ID}>
+                      <Link to={'/funcionario/' + funcio.id}>
                         {funcio.posicao}
                       </Link>
                     </Td>

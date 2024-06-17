@@ -68,7 +68,6 @@ const Especialista =  () => {
             </Link>
           </Flex>
           <TabelaEspecialista Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} />
-          {/* <TabelaFuncionario Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} /> */}
         </Flex>
       </PageFrame>
     </div>

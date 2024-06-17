@@ -18,6 +18,7 @@ import {
   Sexo,
   Status,
 } from '../../../Data/ClienteData.ts'
+import NovoCliente from '../../../Server/Features/Cliente/NovoCliente.ts'
 
 // Componente que renderiza um formulario para adicionar um novo cliente
 // Exemplo de uso:
@@ -39,7 +40,7 @@ import {
 
 const NovoAluno = () => {
   const [FormCliente, setFormCliente] = useState({
-    Matricula: 0,
+    
     nome: '',
     sexo: '',
     dataNascimento: '',
@@ -52,9 +53,7 @@ const NovoAluno = () => {
   })
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    FormCliente.Matricula = Cliente.length + 1
-    Cliente.push(FormCliente)
+    e.preventDefault()    
     console.log(FormCliente)
     redirect('/cliente')
   }
@@ -219,15 +218,11 @@ const NovoAluno = () => {
             
             
           </Grid>
-          <Button
-            type="submit" 
-            colorScheme="purple"
-            width="full"
-            isLoading={false}
-            mt={4}
-          >
-            Salvar
-          </Button>
+          <Button mt={'10px'} colorScheme='purple' type="submit" onClick={() => {
+            NovoCliente(FormCliente)
+            redirect('/Cliente')
+
+          }}>Enviar</Button>
         </form>
       </Flex>
     </Flex>

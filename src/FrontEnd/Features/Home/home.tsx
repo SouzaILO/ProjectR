@@ -23,27 +23,17 @@ const Home = () => {
           Body={'Buscar todos Clientes'}
           Button={'Buscar Clientes'}
           Link={'/cliente'}
-        />
-        <CardsHome
-          Head={'Funcionarios'}
-          Body={'Buscar todos Funcionarios'}
-          Button={'Buscar Funcionarios'}
-          Link={'/funcionario'}
-        />
-        
-        
-        
+        />   
 
-            <CardsHome
-              Head={'Agenda'}
-              Body={'Buscar todos Agendamentos'}
-              Button={'Buscar Agendamentos'}
-              Link={'/agenda'}
-            />
+        <CardsHome
+          Head={'Agenda'}
+          Body={'Buscar todos Agendamentos'}
+          Button={'Buscar Agendamentos'}
+          Link={'/agenda'}
+        />
           
 
-        
-       
+      
 
       </PageFrame>
         

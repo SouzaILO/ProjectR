@@ -1,6 +1,5 @@
 import {
     collection,
-    DocumentData,
     getDocs,
     getFirestore
   } from 'firebase/firestore'

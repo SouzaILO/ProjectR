@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Table,
   TableCaption, 
@@ -9,15 +9,26 @@ import {
   Tr,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import { DocumentData } from 'firebase/firestore'
 import { FiltrarClienteLogic } from '../../../Server/Features/Cliente/TabelaClienteLogica.ts'
+import GetCliente from '../../../Server/Features/Cliente/GetCliente.ts'
 //import Clientes from "../../Json/Clientes.json";
 
 // Componente que renderiza uma tabela com os dados passados por props
 // Exemplo de uso:
 
 const TableComponent = (Filtro) => {
-  const Clientes = FiltrarClienteLogic(Filtro)
-  Clientes.sort((a, b) => (a.nome > b.nome ? 1 : -1))
+  
+  const [ClienteArray, setEspecialistasArray] = useState<DocumentData[]>([])
+   
+
+    useEffect(() => {
+
+
+      GetCliente(Filtro).then((value) => {
+            setEspecialistasArray(value)
+        })
+    }, [Filtro])
   
   return (
     <TableContainer
@@ -45,28 +56,28 @@ const TableComponent = (Filtro) => {
         </Thead>
         
         <Tbody>
-          {Clientes.map((cliente, index) => {
+          {ClienteArray.map((cliente, index) => {
             return (
               index < 10 && (
-                <Tr key={cliente.Matricula}>
+                <Tr key={cliente.id}>
                   <Td>
-                    <Link to={'/cliente/' + cliente.Matricula}>
-                      {cliente.nome}
+                    <Link to={'/cliente/' + cliente.id}>
+                      {cliente.Nome}
                     </Link>
                   </Td>
                   <Td>
-                    <Link to={'/cliente/' + cliente.Matricula}>
-                      {cliente.status}
+                    <Link to={'/cliente/' + cliente.id}>
+                      {cliente.Status}
                     </Link>
                   </Td>
                   <Td>
-                    <Link to={'/cliente/' + cliente.Matricula}>
-                      {cliente.responsavel}
+                    <Link to={'/cliente/' + cliente.id}>
+                      {cliente.Responsavel}
                     </Link>
                   </Td>
                   <Td>
-                    <Link to={'/cliente/' + cliente.Matricula}>
-                      {cliente.estabelecimentoEnsino}
+                    <Link to={'/cliente/' + cliente.id}>
+                      {cliente.EstabelecimentoEnsino}
                     </Link>
                   </Td>
                 </Tr>

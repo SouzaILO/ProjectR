@@ -48,6 +48,7 @@ const Cliente = () => {
                 />
                 <Checkbox
                   colorScheme="green"
+                  defaultChecked
                   margin={'10px'} 
                   onChange={(e) => handeCheckFiltro()}
                 >

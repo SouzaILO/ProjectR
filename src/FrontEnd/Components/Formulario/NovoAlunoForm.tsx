@@ -13,7 +13,6 @@ import { useState } from 'react'
 import { redirect } from 'react-router-dom'
 import {
   anoEscolar,
-  Cliente,
   nivelEscolar,
   Sexo,
   Status,

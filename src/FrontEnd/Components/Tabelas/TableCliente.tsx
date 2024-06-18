@@ -10,7 +10,6 @@ import {
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { DocumentData } from 'firebase/firestore'
-import { FiltrarClienteLogic } from '../../../Server/Features/Cliente/TabelaClienteLogica.ts'
 import GetCliente from '../../../Server/Features/Cliente/GetCliente.ts'
 //import Clientes from "../../Json/Clientes.json";
 

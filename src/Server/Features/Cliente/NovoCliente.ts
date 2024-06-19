@@ -4,6 +4,7 @@ import {
     collection,
     getFirestore
   } from 'firebase/firestore'
+import { redirect } from 'react-router'
   import { ClienteID } from './ClienteID.ts'
 import { anoEscolar, nivelEscolar } from '../../../Data/ClienteData.ts'
 const NovoCliente = async (ClienteForm) => {
@@ -29,8 +30,10 @@ const NovoCliente = async (ClienteForm) => {
         await addDoc(collection(db, 'Cliente'), cliente)
         
         console.log('Cliente cadastrado com sucesso!')
+        return
     } catch (error) {
         console.log('Erro ao cadastrar Cliente', error)
+        return 'Erro ao cadastrar Cliente'
     }
 
 }

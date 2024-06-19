@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
-import { redirect } from 'react-router-dom'
+import { Link, redirect, redirectDocument } from 'react-router-dom'
 import {
   anoEscolar,
   nivelEscolar,
@@ -53,8 +53,9 @@ const NovoAluno = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()    
+    //NovoCliente(FormCliente)
     console.log(FormCliente)
-    redirect('/cliente')
+    return
   }
 
   return (
@@ -217,11 +218,9 @@ const NovoAluno = () => {
             
             
           </Grid>
-          <Button mt={'10px'} colorScheme='purple' type="submit" onClick={() => {
-            NovoCliente(FormCliente)
-            redirect('/Cliente')
-
-          }}>Enviar</Button>
+          <Link to={'/Cliente'}>
+            <Button mt={'10px'} colorScheme='purple' type="submit" onClick={ () => {NovoCliente(FormCliente)}} >Enviar</Button>
+          </Link>
         </form>
       </Flex>
     </Flex>

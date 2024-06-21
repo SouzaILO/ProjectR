@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { DocumentData } from 'firebase/firestore'
-import GetCliente from '../../../Server/Features/Cliente/GetCliente.ts'
+import GetAluno from '../../../Server/Features/Cliente/Aluno/GetAlunos.ts'
 //import Clientes from "../../Json/Clientes.json";
 
 // Componente que renderiza uma tabela com os dados passados por props
@@ -24,7 +24,7 @@ const TableComponent = (Filtro) => {
     useEffect(() => {
 
 
-      GetCliente(Filtro).then((value) => {
+      GetAluno(Filtro).then((value) => {
             setEspecialistasArray(value)
         })
     }, [Filtro])
@@ -60,22 +60,22 @@ const TableComponent = (Filtro) => {
               index < 10 && (
                 <Tr key={cliente.id}>
                   <Td>
-                    <Link to={'/cliente/' + cliente.id}>
+                    <Link to={'/Aluno/' + cliente.id}>
                       {cliente.Nome}
                     </Link>
                   </Td>
                   <Td>
-                    <Link to={'/cliente/' + cliente.id}>
+                    <Link to={'/Aluno/' + cliente.id}>
                       {cliente.Status}
                     </Link>
                   </Td>
                   <Td>
-                    <Link to={'/cliente/' + cliente.id}>
+                    <Link to={'/Aluno/' + cliente.id}>
                       {cliente.Responsavel}
                     </Link>
                   </Td>
                   <Td>
-                    <Link to={'/cliente/' + cliente.id}>
+                    <Link to={'/Aluno/' + cliente.id}>
                       {cliente.EstabelecimentoEnsino}
                     </Link>
                   </Td>

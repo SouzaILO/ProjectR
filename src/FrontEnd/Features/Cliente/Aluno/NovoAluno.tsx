@@ -10,15 +10,14 @@ import {
   Tabs,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import Header from '../../Components/Nav/Header.tsx'
-import PageFrame from '../../Components/Frames/PageFrame.tsx'
-import AlunoForm from '../../Components/Formulario/NovoAlunoForm.tsx'
-import ResponsavelForm from '../../Components/Formulario/NovoResponsavelForm.tsx'
+import Header from '../../../Components/Nav/Header.tsx'
+import PageFrame from '../../../Components/Frames/PageFrame.tsx'
+import AlunoForm from '../../../Components/Formulario/NovoAlunoForm.tsx'
+import ResponsavelForm from '../../../Components/Formulario/NovoResponsavelForm.tsx'
 
 const NovoCliente = () => {
   return (
     <div>
-      
       <Header />
       <PageFrame>
         <Flex display={'flex'} flexDirection={'column'} w={'100%'} h={'100%'}>
@@ -30,7 +29,7 @@ const NovoCliente = () => {
             h={'5%'}
           >
             <Box marginLeft={'90%'}>
-              <Link to={'/cliente'}>
+              <Link to={'/Alunos'}>
                 <Button>Voltar</Button>
               </Link>
             </Box>

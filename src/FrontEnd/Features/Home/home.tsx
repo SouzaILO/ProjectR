@@ -19,10 +19,10 @@ const Home = () => {
       <PageFrame>
         
         <CardsHome
-          Head={'Clientes'}
-          Body={'Buscar todos Clientes'}
-          Button={'Buscar Clientes'}
-          Link={'/cliente'}
+          Head={'Alunos'}
+          Body={'Buscar todos Alunos'}
+          Button={'Buscar Alunos'}
+          Link={'/Alunos'}
         />   
 
         <CardsHome

@@ -3,10 +3,10 @@ import { DocumentData } from 'firebase/firestore'
 import { useParams } from 'react-router'
 import { Box, Button, Flex, FormControl, FormErrorMessage, FormLabel, Grid, Input, Select, Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import Header from '../../Components/Nav/Header.tsx'
-import PageFrame from '../../Components/Frames/PageFrame.tsx'
-import { GetClienteByID } from '../../../Server/Features/Cliente/GetCliente.ts'
-import { anoEscolar, nivelEscolar, Sexo, Status } from '../../../Data/ClienteData.ts'
+import Header from '../../../Components/Nav/Header.tsx'
+import PageFrame from '../../../Components/Frames/PageFrame.tsx'
+import { GetAlunosByID } from  '../../../../Server/Features/Cliente/Aluno/GetAlunos.ts'
+import { anoEscolar, nivelEscolar, Sexo, Status } from '../../../../Data/ClienteData.ts'
 
 
 const ClienteEdit = () => {
@@ -25,7 +25,7 @@ const ClienteEdit = () => {
   }) 
 
   useEffect(() => {
-    GetClienteByID(id).then((clientes) => {
+    GetAlunosByID(id).then((clientes) => {
       setClienteArray(clientes)
 
       if (clientes.length > 0) {
@@ -52,25 +52,7 @@ const ClienteEdit = () => {
     <div>
       <Header />
       <PageFrame>
-        {ClienteArray.map((cliente, index) => (
-          <Box key={index} border="1px" borderColor="gray.200" borderRadius="5px" margin="5px" padding="5px">
 
-            {cliente && (
-              <>
-                <Text>Nome: {cliente.Nome}</Text>
-                <Text>Data de Nascimento: {cliente.DataNascimento}</Text>
-                <Text>Status: {cliente.Status}</Text>
-                <Text>Responsável: {cliente.Responsavel}</Text>
-                <Text>Sexo: {cliente.Sexo}</Text>
-                <Text>Estabelecimento de Ensino: {cliente.EstabelecimentoEnsino}</Text>
-                <Text>Ano Escolar: {cliente.anoEscolar}</Text>
-                <Text>Nível Escolar: {cliente.nivelEscolar}</Text>
-                <Text>Endereço: {cliente.Endereco}</Text>
-              </>
-            )}
-
-          </Box>
-        ))}
       <Flex
         display={'flex'}
         flexDirection={'column'}

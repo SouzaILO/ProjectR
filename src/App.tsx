@@ -3,10 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { initializeApp } from 'firebase/app'
 import Login from './FrontEnd/Features/Login/login.tsx'
 import Home from './FrontEnd/Features/Home/home.tsx'
-import Cliente from './FrontEnd/Features/Cliente/Cliente.tsx'
-import ClienteEdit from './FrontEnd/Features/Cliente/ClienteEdit.tsx'
+import Alunos from './FrontEnd/Features/Cliente/Alunos.tsx'
+import AlunosEdit from './FrontEnd/Features/Cliente/Aluno/AlunosEdit.tsx'
 import FuncionarioEdit from './FrontEnd/Features/Funcionarios/FuncionarioEdit.tsx'
-import ClienteNovo from './FrontEnd/Features/Cliente/NovoCliente.tsx'
+import NovoAluno from './FrontEnd/Features/Cliente/Aluno/NovoAluno.tsx'
 import NovoFuncionario from './FrontEnd/Features/Funcionarios/NovoFuncionario.tsx'
 import Funcionarios from './FrontEnd/Features/Funcionarios/Funcionario.tsx'
 import Agenda from './FrontEnd/Features/Agenda/agenda.tsx'
@@ -44,13 +44,13 @@ const App: React.FunctionComponent<IApplicationProps> = (props) => {
                       </AuthRoute>
                   }
               />
-              <Route path="/cliente" 
+              <Route path="/Alunos" 
                       element={
                         <AuthRoute>
-                          <Cliente />
+                          <Alunos />
                         </AuthRoute>} />
-              <Route path="/cliente/:id" element={<AuthRoute><ClienteEdit /></AuthRoute>} />
-              <Route path="/Cadastro/Cliente" element={<AuthRoute><ClienteNovo /></AuthRoute>} />
+              <Route path="/Aluno/:id" element={<AuthRoute><AlunosEdit /></AuthRoute>} />
+              <Route path="/Cadastro/Aluno" element={<AuthRoute><NovoAluno /></AuthRoute>} />
               <Route path="/Cadastro/funcionario" element={<AuthRoute><NovoFuncionario /></AuthRoute>} />
               <Route path="/Cadastro/especialista" element={<AuthRoute><NovoEspecialista /></AuthRoute>} />
               <Route path="/funcionario" element={<AuthRoute><Funcionarios /></AuthRoute>} />

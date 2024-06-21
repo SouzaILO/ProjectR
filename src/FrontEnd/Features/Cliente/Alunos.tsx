@@ -4,7 +4,7 @@ import { Button, Checkbox, Flex, Input } from '@chakra-ui/react'
 import { useState } from 'react'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import Header from '../../Components/Nav/Header.tsx'
-import TabelaCliente from '../../Components/Tabelas/TableCliente.tsx'
+import TabelaAlunos from '../../Components/Tabelas/TabelaAlunos.tsx'
 
 
 //TODO Fazer com que cada fileira da tabela seja clicavel e redirecione para a pagina de detalhes do cliente OU abrir um modal com os detalhes do cliente
@@ -56,12 +56,12 @@ const Cliente = () => {
                 </Checkbox>
               </form>
             </Flex>
-            <Link to={'/Cadastro/Cliente'}>
+            <Link to={'/Cadastro/Aluno'}>
               <Button>Novo Cliente</Button>
             </Link>
           </Flex>
           <Suspense fallback={<Loading />}>
-          <TabelaCliente Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} />
+          <TabelaAlunos Filtro={FiltroIn} FiltroAtivo={FiltroAtivo} />
           </Suspense>
         </Flex>
       </PageFrame>

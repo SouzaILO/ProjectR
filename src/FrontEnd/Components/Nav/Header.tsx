@@ -72,7 +72,7 @@ const Header = (props) => {
         <button onClick={() => navigate('/Agenda')}>Agenda</button>
         </MenuItems>
         <MenuItems>
-        <button onClick={() => navigate('/Cliente')}>Clientes</button>
+        <button onClick={() => navigate('/Alunos')}>Alunos</button>
         </MenuItems>
         <MenuItems>
         <button onClick={() => navigate('/Funcionario')}>Funcionários</button>

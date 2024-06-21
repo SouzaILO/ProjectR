@@ -41,7 +41,7 @@ function NavLeft() {
           <DrawerBody display={'flex'} flexDirection={'column'}>
             <Link to="/">Home</Link>
             <Link to="/login">Login</Link>
-            <Link to="/cliente">Cliente</Link>
+            <Link to="/Alunos">Alunos</Link>
           </DrawerBody>
 
           <DrawerFooter></DrawerFooter>

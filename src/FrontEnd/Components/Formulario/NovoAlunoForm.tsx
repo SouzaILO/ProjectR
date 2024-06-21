@@ -17,7 +17,7 @@ import {
   Sexo,
   Status,
 } from '../../../Data/ClienteData.ts'
-import NovoCliente from '../../../Server/Features/Cliente/NovoCliente.ts'
+import NovoAlunoServer from '../../../Server/Features/Cliente/Aluno/NovoAlunoBack.ts'
 
 // Componente que renderiza um formulario para adicionar um novo cliente
 // Exemplo de uso:
@@ -218,8 +218,8 @@ const NovoAluno = () => {
             
             
           </Grid>
-          <Link to={'/Cliente'}>
-            <Button mt={'10px'} colorScheme='purple' type="submit" onClick={ () => {NovoCliente(FormCliente)}} >Enviar</Button>
+          <Link to={'/Alunos'}>
+            <Button mt={'10px'} colorScheme='purple' type="submit" onClick={ () => {NovoAlunoServer(FormCliente)}} >Enviar</Button>
           </Link>
         </form>
       </Flex>

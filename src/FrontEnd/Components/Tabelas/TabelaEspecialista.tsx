@@ -48,6 +48,7 @@ const TableEspecialista = (Filtro) => {
                 <Td>Nome</Td>
                 <Td>Status</Td>
                 <Td>cpf</Td>
+                <Td>cnpj</Td>
                 <Td>Especialidade</Td>
               </Tr>
             </Thead>
@@ -76,6 +77,13 @@ const TableEspecialista = (Filtro) => {
                         <Td>   
                             <Link to={`/Especialista/${esp.id}`}>                   
                             {esp.cpf}       
+                            </Link>               
+                        </Td>
+
+                        
+                        <Td>   
+                            <Link to={`/Especialista/${esp.id}`}>                   
+                            {esp.cnpj}       
                             </Link>               
                         </Td>
                         

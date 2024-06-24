@@ -16,6 +16,7 @@ import AuthRoute from './FrontEnd/Components/Routes/AuthRoute.tsx'
 import ContaEdit from './FrontEnd/Features/Conta/ContaEdit.tsx'
 import Especialista from './FrontEnd/Features/Especialista/Especialista.tsx'
 import NovoEspecialista from './FrontEnd/Features/Especialista/NovoEspecialista.tsx'
+import EspecialistaEdit from './FrontEnd/Features/Especialista/EspecialistaEdit.tsx'
 
 
    
@@ -59,6 +60,7 @@ const App: React.FunctionComponent<IApplicationProps> = (props) => {
               <Route path="/agenda/individual" element={<AuthRoute><AgendaIndividual /></AuthRoute>} />
               <Route path="/contaEdit" element={<AuthRoute><ContaEdit /></AuthRoute>} />
               <Route path="/especialista" element={<AuthRoute><Especialista /></AuthRoute>} />
+              <Route path="/Especialista/:id" element={<AuthRoute><EspecialistaEdit /></AuthRoute>} />
               <Route path="/login" element={<Login />} />
           </Routes>
       </BrowserRouter>

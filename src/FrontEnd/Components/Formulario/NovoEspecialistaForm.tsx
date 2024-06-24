@@ -1,6 +1,7 @@
 import { Button, Flex, FormControl, FormLabel, Grid, Input, Select } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {  
     Status,
   } from '../../../Data/ClienteData.ts'
@@ -103,7 +104,9 @@ const NovoEspecialistaForm = () => {
             </FormControl>
                 </Grid>
             </form>
+            <Link to={'/especialista'}>
             <Button mt={'10px'} colorScheme='purple' type="submit" onClick={() => {NovoEspecialista(FormEspc)}}>Enviar</Button>
+            </Link>
             </Flex>
    
     )

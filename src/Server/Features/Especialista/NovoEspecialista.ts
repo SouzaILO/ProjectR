@@ -1,28 +1,34 @@
 
 import {
-    addDoc,
-    collection,
-    getFirestore
+    doc,
+    getFirestore,
+    setDoc
   } from 'firebase/firestore'
   import { EspecialistID } from '../../../Server/Features/Especialista/EspecialistID.ts'
-const NovoEspecialista = async (EspcForm) => {
+const NovoEspecialista = async (EspecialistaForm) => {
 
     const id = await EspecialistID()
-    
-    
+
     const especialista = {
         id: id ,
-        Nome: EspcForm.nome,    
-        cpf: EspcForm.cpf,
-        cnpj: EspcForm.cnpj,
-        especialidade: EspcForm.especialidade,
-        status: EspcForm.status
+        Nome: EspecialistaForm.nome,    
+        cpf: EspecialistaForm.cpf,
+        cnpj: EspecialistaForm.cnpj,
+        especialidade: EspecialistaForm.especialidade,
+        status: EspecialistaForm.status
     }
-    console.log(especialista)
-    console.log(EspcForm)
     try {
         const db = getFirestore()
-        await addDoc(collection(db, 'Especialista'), especialista)
+
+
+        await setDoc(doc(db, 'Especialista', id.toString()), { 
+            id: id ,
+            Nome: EspecialistaForm.nome,    
+            cpf: EspecialistaForm.cpf,
+            cnpj: EspecialistaForm.cnpj,
+            especialidade: EspecialistaForm.especialidade,
+            status: EspecialistaForm.status
+         })
         
         console.log('Especialista cadastrado com sucesso!')
     } catch (error) {

@@ -57,18 +57,35 @@ const TableEspecialista = (Filtro) => {
                   return (
                     index < 10 && (
                       <Tr key={esp.Nome}>
+                        
                         <Td>
-                            {esp.Nome}                      
+                          <Link to={`/Especialista/${esp.id}`}>
+                            {esp.Nome}               
+                            </Link>       
                         </Td>
-                        <Td>                      
-                            {esp.status}                      
+                       
+                        
+                        <Td> 
+                            <Link to={`/Especialista/${esp.id}`}>                     
+                            {esp.status}     
+                            </Link>                 
                         </Td>
-                        <Td>                      
-                            {esp.cpf}                      
+                        
+                       
+
+                        <Td>   
+                            <Link to={`/Especialista/${esp.id}`}>                   
+                            {esp.cpf}       
+                            </Link>               
                         </Td>
-                        <Td>                      
-                            {esp.especialidade}                      
+                        
+                        
+                        <Td>  
+                          <Link to={`/Especialista/${esp.id}`}>                    
+                            {esp.especialidade}  
+                            </Link>                    
                         </Td>
+                        
                       </Tr>
                     )
                   )

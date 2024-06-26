@@ -26,7 +26,7 @@ const messages = {
 const eventTeste = []
 
 
-const BigAgenda  = async () =>{
+const BigAgenda  =  () =>{
 
   const [EventsCalendar , setEventsCalendar] = React.useState([])
   console.log( getEvents())

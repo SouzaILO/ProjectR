@@ -5,6 +5,7 @@ import React from 'react'
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import './AgendaCalendario.css'
+import { getEvents } from '../../../Server/APIS/Calendar/fetch.ts'
 
 // Setup the localizer by providing the moment (or globalize, or Luxon) Object
 // to the correct localizer.
@@ -22,45 +23,62 @@ const messages = {
   time: 'Hora',
   event: 'Evento',
 }
-const eventTeste = [
-  {
-  
-    title: 'Aula 1',
-    start: '2024-06-06T09:00:00',
-    end: '2024-06-06T10:00:00',
-  },
-  {
-    title: 'Aula 2',
-    start: '2024-06-06T10:00:00',
-    end: '2024-06-06T11:00:00',
-  },
-  {
-    title: 'Aula 3',
-    start: '2024-06-06T11:00:00',
-    end: '2024-06-06T12:00:00',
-  },
-  {
-    title: 'Aula 4',
-    start: '2024-06-06T14:00:00',
-    end: '2024-06-06T15:00:00',
-  }
-]
+const eventTeste = []
 
- const BigAgenda = (props) => (
-  <div  className="Calendario">
-    <Calendar
-      messages={messages}
-      localizer={localizer}
-      events={
-        
-         eventTeste
-        
-      }
-      startAccessor="start"
-      endAccessor="end"
-    />
-    
-  </div>
-)
+
+const BigAgenda  = async () =>{
+
+  const [EventsCalendar , setEventsCalendar] = React.useState([])
+  console.log( getEvents())
+  React.useEffect(() => {
+  
+   
+  }, [])
+
+  return (
+    <div className="Calendario">
+      <Calendar
+        messages={messages}
+        localizer={localizer}
+        events={EventsCalendar}
+        startAccessor="start"
+        endAccessor="end"
+      />
+    </div>
+  
+  )
+}
+
+
+/* class BigAgenda extends React.Component {
+
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      events: []
+    }
+  }
+
+  componentDidMount() {
+    getEvents(events => {
+      this.setState({ events })
+    })
+  }
+
+  render() {
+    return (
+      <div className="Calendario">
+        <Calendar
+          messages={messages}
+          localizer={localizer}
+          events={this.state.events}
+          startAccessor="start"
+          endAccessor="end"
+        />
+      </div>
+    )
+  }
+} */
 
 export default BigAgenda

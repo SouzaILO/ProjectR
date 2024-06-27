@@ -8,10 +8,10 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
-import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
+import { signInWithEmailAndPassword,signInWithPopup, getAuth,GoogleAuthProvider} from 'firebase/auth'
 import SetUserRedux from '../../../Server/DataBase/UserInfo.ts'
 
- 
+  
 
 const Login = () => {
   const auth = getAuth()
@@ -20,6 +20,32 @@ const Login = () => {
   const [Password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
   const [isError, setIsError] = useState(false)
+
+
+  const handleGoogleLogin = () => {
+    const auth = getAuth()
+    const provider = new GoogleAuthProvider() // Add this line to create a new instance of GoogleAuthProvider
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result)
+        const token = credential?.accessToken
+        // The signed-in user info.
+        const user = result.user
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+        navigate('/')
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code
+        const errorMessage = error.message
+        // The email of the user's account used.
+        const email = error.customData.email
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error)
+        // ...
+      })
+  }
 
 
   const handleSubmit = async (e) => {
@@ -105,10 +131,25 @@ const Login = () => {
             }
               color="red"
              >{errorMessage}</p>
-           <Button type="submit" marginTop="30px">Entrar</Button>
+           <Button 
+           ml={'30%'}
+           type="submit" marginTop="30px">Entrar</Button>
+
           </form>
+
+          {
+
+
+
+          }
+          
           
         </Box>
+             <Button mt={'10px'}
+              onClick={handleGoogleLogin}
+             >
+              Login com Google
+            </Button>
       </Box>
     </HStack>
   )

@@ -20,28 +20,7 @@
     "no-unused-vars": "off",
     "semi": ["error", "never"],
     "quotes": ["error", "single"],
-    "prettier/prettier": "off",
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": true,
-        "ignoreDeclarationSort": true,
-        "ignoreMemberSort": false
-      }
-    ],
-    "import/order": [
-      "error",
-      {
-        "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
-        "pathGroups": [
-          {
-            "pattern": "react",
-            "group": "external",
-            "position": "before"
-          }
-        ]
-      }
-    ]
+    "prettier/prettier": "off"
 
 
     

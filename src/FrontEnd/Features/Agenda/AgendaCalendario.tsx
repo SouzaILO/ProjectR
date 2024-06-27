@@ -2,13 +2,13 @@ import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import 'moment/locale/pt-br'
 import React from 'react'
-
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import './AgendaCalendario.css'
-import { getEvents } from '../../../Server/APIS/Calendar/fetch.ts'
+
 
 // Setup the localizer by providing the moment (or globalize, or Luxon) Object
 // to the correct localizer.
+
 const localizer = momentLocalizer(moment) // or globalizeLocalizer
 const messages = {
   allDay: 'Dia Inteiro',
@@ -26,12 +26,13 @@ const messages = {
 const eventTeste = []
 
 
+
 const BigAgenda  =  () =>{
 
   const [EventsCalendar , setEventsCalendar] = React.useState([])
-  console.log( getEvents())
+
   React.useEffect(() => {
-  
+      
    
   }, [])
 

@@ -1,0 +1,14 @@
+{"web":
+{
+    "client_id":"35152341949-40dqnt1mlc67249ck3pnsml8p48t26br.apps.googleusercontent.com",
+    "project_id":"projetor-db5a9",
+    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+    "token_uri":"https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret":"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",
+    "redirect_uris":["http://localhost:3000/redirect"],
+    "javascript_origins":["http://localhost:3000"],
+    "client_email": "iago.lucas009@gmail.com",
+    "private_key":"AIzaSyCtExZ39BOh6SmGS9Ec9OpYnqL_HxjQjyQ"
+    }
+}

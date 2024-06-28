@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Input, Text } from '@chakra-ui/react'
-import { useSelector } from 'react-redux'
 import Header from '../../Components/Nav/Header.tsx'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
-import { RootState } from '../../../Redux/store.ts'
+
 import GetCurrentUser from '../../../Server/DataBase/UserInfo.ts'
 
 const ContaEdit = () => {

@@ -5,8 +5,7 @@ import {
     getDocs,
     getFirestore
   } from 'firebase/firestore'
-import { login } from '../../Redux/features/user.ts'
-import store from '../../Redux/store.ts'
+
 
 
 
@@ -38,7 +37,7 @@ async function GetCurrentUser () {
         Perm: UserPerm
     }
 
-    store.dispatch(login(userredux))
+    
 
     return userredux
             

@@ -30,8 +30,6 @@ export interface IApplicationProps {
   children: React.ReactNode
 }
 
-
-
 const App: React.FunctionComponent<IApplicationProps> = (props) => {
   return (
       <BrowserRouter> 

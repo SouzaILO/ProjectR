@@ -15,6 +15,7 @@ const EditAlunoForm = () => {
 
     const { id } = useParams()
     const [ClienteArray, setClienteArray] = useState<(DocumentData | undefined)[]>([])
+    console.log('ClienteArray', ClienteArray)
     const [FormCliente, setFormCliente] = useState({
       nome: '' ,
       sexo: '',
@@ -73,7 +74,7 @@ const EditAlunoForm = () => {
               type="text"
               name="nome"
               
-              onChange={(e) =>
+              onChange={(e: { target: { value: any } }) =>
                 setFormCliente({ ...FormCliente, nome: e.target.value })
               }
               value={FormCliente.nome}
@@ -85,7 +86,7 @@ const EditAlunoForm = () => {
             <Select
               bg={'white'}
               name="sexo"
-              onChange={(e) =>
+              onChange={(e: { target: { value: any } }) =>
                 setFormCliente({ ...FormCliente, sexo: e.target.value })
               }
               value={FormCliente.sexo}
@@ -104,7 +105,7 @@ const EditAlunoForm = () => {
               bg={'white'}
               type="date"
               name="dataNascimento"
-              onChange={(e) =>
+              onChange={(e: { target: { value: any } }) =>
                 setFormCliente({
                   ...FormCliente,
                   dataNascimento: e.target.value,
@@ -120,7 +121,7 @@ const EditAlunoForm = () => {
               bg={'white'}
               type="text"
               name="responsavel"
-              onChange={(e) =>
+              onChange={(e: { target: { value: any } }) =>
                 setFormCliente({
                   ...FormCliente,
                   responsavel: e.target.value,
@@ -136,7 +137,7 @@ const EditAlunoForm = () => {
               bg={'white'}
               type="text"
               name="endereco"
-              onChange={(e) =>
+              onChange={(e: { target: { value: any } }) =>
                 setFormCliente({ ...FormCliente, endereco: e.target.value })
               }
               value={FormCliente.endereco}
@@ -148,7 +149,7 @@ const EditAlunoForm = () => {
               bg={'white'}
               type="text"
               name="estabelecimentoEnsino"
-              onChange={(e) =>
+              onChange={(e: { target: { value: any } }) =>
                 setFormCliente({
                   ...FormCliente,
                   estabelecimentoEnsino: e.target.value,
@@ -162,7 +163,7 @@ const EditAlunoForm = () => {
             <Select
               bg={'white'}
               name="nivelEscolar"
-              onChange={(e) =>
+              onChange={(e: { target: { value: any } }) =>
                 setFormCliente({
                   ...FormCliente,
                   nivelEscolar: e.target.value,
@@ -182,7 +183,7 @@ const EditAlunoForm = () => {
             <Select
               bg={'white'}
               name="anoEscolar"
-              onChange={(e) =>
+              onChange={(e: { target: { value: any } }) =>
                 setFormCliente({ ...FormCliente, anoEscolar: e.target.value })
               }
               value={FormCliente.anoEscolar}
@@ -199,7 +200,7 @@ const EditAlunoForm = () => {
             <Select
               bg={'white'}
               name="status"
-              onChange={(e) =>
+              onChange={(e: { target: { value: any } }) =>
                 setFormCliente({ ...FormCliente, status: e.target.value })
               }
               value={FormCliente.status}

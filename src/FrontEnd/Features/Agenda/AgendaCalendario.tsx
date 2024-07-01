@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import 'moment/locale/pt-br'
@@ -53,36 +54,5 @@ const BigAgenda  =  () =>{
   )
 }
 
-
-/* class BigAgenda extends React.Component {
-
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      events: []
-    }
-  }
-
-  componentDidMount() {
-    getEvents(events => {
-      this.setState({ events })
-    })
-  }
-
-  render() {
-    return (
-      <div className="Calendario">
-        <Calendar
-          messages={messages}
-          localizer={localizer}
-          events={this.state.events}
-          startAccessor="start"
-          endAccessor="end"
-        />
-      </div>
-    )
-  }
-} */
 
 export default BigAgenda

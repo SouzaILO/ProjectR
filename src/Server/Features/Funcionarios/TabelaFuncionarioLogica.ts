@@ -1,6 +1,6 @@
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import { funcionarios } from '../../../Data/Funcionarios.ts'
-export const FiltrarFuncionario = async (InputFiltro) => {
+export const FiltrarFuncionario = async (InputFiltro: { Filtro: any; FiltroAtivo: any }) => {
     const Filtro = InputFiltro.Filtro
     const Check = InputFiltro.FiltroAtivo 
   
@@ -25,7 +25,7 @@ export const FiltrarFuncionario = async (InputFiltro) => {
     return FuncinariosFiltrados
 }
 
-  export const PegarFuncionarioPorId = (ID) => {
+  export const PegarFuncionarioPorId = (ID: string | number | undefined) => {
     const FuncionariosFiltrados = funcionarios.filter((funcionarios) => {
       if (funcionarios.ID == ID) {
         return funcionarios

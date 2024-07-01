@@ -1,15 +1,11 @@
 import {
-    addDoc,
-    collection,
     doc,
-    Firestore,
     getFirestore,
-    setDoc,
     updateDoc,
   } from 'firebase/firestore'
 
 
-const AlunoEditServer = async (AlunoForm) => {
+const AlunoEditServer = async (AlunoForm: { nome: any; sexo: any; dataNascimento: any; responsavel: any; endereco: any; estabelecimentoEnsino: any; nivelEscolar: any; anoEscolar: any; status: any; id: any }) => {
    
     
     try {

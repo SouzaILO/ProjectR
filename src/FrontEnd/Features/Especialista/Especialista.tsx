@@ -1,11 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
-import { Box, Button, Checkbox, Flex, Input, Text } from '@chakra-ui/react'
+import { Button, Checkbox, Flex, Input, Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import Header from '../../Components/Nav/Header.tsx'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
-import GetEspecialista from '../../../Server/Features/Especialista/GetEspecialista.ts'
-import TabelaFuncionario from '../../Components/Tabelas/TabelaFuncionario.tsx'
 import TabelaEspecialista from '../../Components/Tabelas/TabelaEspecialista.tsx'
 
 const Especialista =  () => {
@@ -17,7 +15,7 @@ const Especialista =  () => {
     setFiltroAtivo(!FiltroAtivo)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault()
     setFiltroIn(FiltroIn)
   }

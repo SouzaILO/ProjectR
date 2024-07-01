@@ -6,6 +6,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css'
 import './AgendaCalendario.css'
 
 
+
 // Setup the localizer by providing the moment (or globalize, or Luxon) Object
 // to the correct localizer.
 
@@ -23,11 +24,13 @@ const messages = {
   time: 'Hora',
   event: 'Evento',
 }
-const eventTeste = []
+
 
 
 
 const BigAgenda  =  () =>{
+
+  
 
   const [EventsCalendar , setEventsCalendar] = React.useState([])
 

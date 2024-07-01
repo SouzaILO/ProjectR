@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import React, { Suspense } from 'react'
-import { Button, Checkbox, Flex, Input } from '@chakra-ui/react'
 import { useState } from 'react'
+import { Button, Checkbox, Flex, Input } from '@chakra-ui/react'
 import PageFrame from '../../Components/Frames/PageFrame.tsx'
 import Header from '../../Components/Nav/Header.tsx'
 import TabelaAlunos from '../../Components/Tabelas/TabelaAlunos.tsx'
@@ -17,7 +17,7 @@ const Cliente = () => {
     setFiltroAtivo(!FiltroAtivo)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault()
     setFiltroIn(FiltroIn)
   }
@@ -44,13 +44,15 @@ const Cliente = () => {
                   type="text"
                   placeholder="Filtro de Cliente"
                   value={FiltroIn}
-                  onChange={(e) => setFiltroIn(e.target.value)}
+                  onChange={(e: { target: { value: any } }) => setFiltroIn(e.target.value)}
                 />
                 <Checkbox
                   colorScheme="green"
                   defaultChecked
                   margin={'10px'} 
                   onChange={(e) => handeCheckFiltro()}
+                  onBlur={() => {}}
+                  checked={false}
                 >
                   Mostrar Ativos
                 </Checkbox>

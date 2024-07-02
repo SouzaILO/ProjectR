@@ -5,6 +5,7 @@ import 'moment/locale/pt-br'
 import React from 'react'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import './AgendaCalendario.css'
+import fetchData from '../../../Server/APIS/Calendar/fetch'
 
 
 
@@ -36,6 +37,10 @@ const BigAgenda  =  () =>{
   const [EventsCalendar , setEventsCalendar] = React.useState([])
 
   React.useEffect(() => {
+
+    fetchData().then((value) => {
+      setEventsCalendar(value)
+  })
       
    
   }, [])

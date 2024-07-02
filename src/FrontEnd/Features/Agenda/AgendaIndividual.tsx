@@ -5,6 +5,7 @@ import BigAgenda from './AgendaCalendario.tsx'
 import { getAuth } from 'firebase/auth'
 import { Box } from '@chakra-ui/react'
 
+
  
 const AgendaIndividual = () => {    
 

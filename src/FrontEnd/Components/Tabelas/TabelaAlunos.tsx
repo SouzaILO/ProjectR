@@ -16,7 +16,7 @@ import GetAluno from '../../../Server/Features/Cliente/Aluno/GetAlunos.ts'
 // Componente que renderiza uma tabela com os dados passados por props
 // Exemplo de uso:
 
-const TableComponent = (Filtro) => {
+const TableComponent = (Filtro: unknown) => {
   
   const [ClienteArray, setEspecialistasArray] = useState<DocumentData[]>([])
    

@@ -34,19 +34,46 @@ const BigAgenda  =  () =>{
 
   
 
-  const [EventsCalendar , setEventsCalendar] = React.useState([])
+  const [EventsCalendar , setEventsCalendar] = React.useState<{ id: number, title: string, start: Date, end: Date }[]>([])
 
   React.useEffect(() => {
 
-    fetchData().then((value) => {
-      setEventsCalendar(value)
-  })
+    fetchData().then((data) => {
+      console.log(data)
+      const events = data.map((event: any, index: number) => {
+    // Format the start and end dates as YYYY-MM-DD
+    const formattedStart = event.start.dateTime ? event.start.dateTime.split('T')[0] : event.start.date; // Handle both dateTime and date formats
+    const formattedEnd = event.end.dateTime ? event.end.dateTime.split('T')[0] : event.end.date;
+
+    return {
+      id: index,
+      title: event.summary,
+      // Parse the formatted dates into Date objects
+      start: new Date(formattedStart), 
+      end: new Date(formattedEnd),
+        }
+      })
+      setEventsCalendar(events)
+    })
       
    
   }, [])
 
   return (
     <div className="Calendario">
+
+      {
+       /*  EventsCalendar.map ((event) => {
+          return (
+            <div key={event.id}>
+              <p>{event.title}</p>
+              <p>{event.start.toString()}</p>
+              <p>{event.end.toString()}</p>
+            </div>
+          )
+
+      }) */
+      }
       <Calendar
         messages={messages}
         localizer={localizer}
